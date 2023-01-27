@@ -78,7 +78,7 @@ const Resume = (props) => {
   const projectsDetails = [
     {
       title: "Personal Portfolio Website",
-      projectUrl: "https://talkies-8bc89.web.app/",
+      projectUrl: "https://portfolio-vishalkrsoni.web.app/",
       duration: { fromDate: "June'22", toDate: "July'22" },
       description:
         "A Personal Portfolio website to showcase all my details and projects at one place.",
