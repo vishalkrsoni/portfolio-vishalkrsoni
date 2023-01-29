@@ -106,7 +106,7 @@ const Resume = (props) => {
       subHeading: "Technologies Used: React JS, Redux, ExpressJs, NodeJs",
     },
     {
-      title: "Be-In-Touch",
+      title: "Chit-Chat",
       projectUrl: "https://talkies-8bc89.web.app/",
 
       duration: { fromDate: "2020", toDate: "2021" },
