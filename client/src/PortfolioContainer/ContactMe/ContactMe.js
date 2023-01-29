@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from "react";
 import Typical from "react-typical";
 import axios from "axios";
@@ -65,25 +66,24 @@ export default function ContactMe(props) {
 
   return (
     <div className="main-container fade-in" id={props.id || ""}>
-      <ScreenHeading subHeading={"Lets Keep In Touch"}  title={"Contact Me"} />
+      <ScreenHeading subHeading={"Lets Keep In Touch"} title={"Contact Me"} />
       <div className="central-form" id="ContactMe">
         <div className="col">
           <h2 className="title">
-          {" "}
-                <Typical
-                  loop={Infinity}
-                  wrapper="b"
-                  steps={[
-                    "Get In Touch 🤝",
-                    2200,
-                    "Email Me And 📧",
-                    2200,
-                    "Get Your Job Done! 👍🏻",
-                    2200,
-                  ]}
-                />
-            
-            </h2>{" "}
+            {" "}
+            <Typical
+              loop={Infinity}
+              wrapper="b"
+              steps={[
+                "Get In Touch 🤝",
+                2200,
+                "Email Me And 📧",
+                2200,
+                "Get Your Job Done! 👍🏻",
+                2200,
+              ]}
+            />
+          </h2>{" "}
           <a href="https://www.facebook.com/vishalkrsoni">
             <i className="fa fa-facebook-square" />
           </a>

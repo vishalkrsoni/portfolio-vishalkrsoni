@@ -1,5 +1,6 @@
 import React from "react";
-import './ScreenHeading.css'
+import "./ScreenHeading.css";
+// import { UilArrowUp } from "@iconscout/react-unicons";
 
 const ScreenHeading = (props) => {
   return (
@@ -21,6 +22,7 @@ const ScreenHeading = (props) => {
           </div>
         </div>
       </div>
+      {/* <UilArrowUp className="up__arrow" /> */}
     </div>
   );
 };

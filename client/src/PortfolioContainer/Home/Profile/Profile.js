@@ -3,6 +3,8 @@ import Typical from "react-typical";
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
 // import AnimatedText from "react-animated-text-content";
+// import * as Unicons from "@iconscout/react-unicons";
+// import { UilArrowUp } from '@iconscout/react-unicons'
 
 const Profile = () => {
   return (
@@ -12,7 +14,7 @@ const Profile = () => {
           <div className="colz">
             <div className="colz-icon">
               <a href="https://www.facebook.com/vishalkrsoni">
-                <i className="fa fa-facebook-square" ></i>
+                <i className="fa fa-facebook-square"></i>
               </a>
               <a href="https://myaccount.google.com/profile">
                 <i className="fa fa-google-plus-square"></i>
@@ -24,7 +26,7 @@ const Profile = () => {
                 <i className="fa fa-github"></i>
               </a>
               <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
-                <i className="fa fa-linkedin-square" ></i>
+                <i className="fa fa-linkedin-square"></i>
               </a>
             </div>
           </div>
@@ -32,7 +34,8 @@ const Profile = () => {
           <div className="profile-details-name">
             <span className="primary-text">
               {" "}
-              Hello, I'm <span className="highlighted-text"> Vishal Soni </span>
+              Hello, I'm{" "}
+              <span className="highlighted-text"> Vishal Kr Soni </span>
             </span>
           </div>
 
@@ -56,27 +59,6 @@ const Profile = () => {
                   ]}
                 />
               </h1>{" "}
-              {/* <h1>
-                {" "}
-                <AnimatedText
-                  type="char" // animate words or chars
-                  animation={{
-                    x: "40px",
-                    y: "-20px",
-                    scale: 1.4,
-                    ease: "ease-in-out",
-                  }}
-                  animationType="float"
-                  interval={0.09}
-                  duration={0.8}
-                  tag="p"
-                  className="animated-paragraph"
-                  includeWhiteSpaces
-                  threshold={0.9}
-                  rootMargin="60%">
-                  Front end dev
-                </AnimatedText>
-              </h1> */}
               <span className="profile-role-tagline">
                 Building applications in Front-End and Back-End
               </span>
@@ -84,9 +66,9 @@ const Profile = () => {
           </div>
 
           <div className="profile-options">
-            <button className="btn primary-btn"
-           onClick={() => ScrollService.scrollToHireMe()}
-           >
+            <button
+              className="btn primary-btn"
+              onClick={() => ScrollService.scrollToHireMe()}>
               {""}
               Hire Me{" "}
             </button>
@@ -99,11 +81,14 @@ const Profile = () => {
             </a>
           </div>
         </div>
-
         <div className="profile-picture">
           <div className="profile-picture-background"></div>
         </div>
+
+      {/* <UilArrowUp  /> */}
+
       </div>
+
     </div>
   );
 };

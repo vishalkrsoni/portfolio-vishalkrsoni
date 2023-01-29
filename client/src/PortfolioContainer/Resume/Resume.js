@@ -3,6 +3,8 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Resume.css";
+// import { UilArrowUp } from '@iconscout/react-unicons'
+
 
 const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
@@ -354,8 +356,12 @@ const Resume = (props) => {
           </div>
           <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
+        
       </div>
+      {/* <UilArrowUp className="navigate__arrow" style={{ background:"red", font:"24px"}}/> */}
+
     </div>
+    
   );
 };
 
