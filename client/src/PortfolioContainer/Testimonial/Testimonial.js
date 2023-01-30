@@ -40,8 +40,8 @@ export default function Testimonial(props) {
     dots: true,
     autoplay: true,
     smartSpeed: 1000,
-    URLhashListener:true,
-    startPosition: 'URLHash',
+    URLhashListener: true,
+    startPosition: "URLHash",
     responsive: {
       0: {
         items: 1,
@@ -56,12 +56,12 @@ export default function Testimonial(props) {
   };
 
   return (
-    <div>
+    <div id={props.id || ""}>
       <ScreenHeading
         title={"Testimonial"}
         subHeading={"What My Peers Say About Me"}
       />
-      <section className="testimonial-section fade-in" id={props.id || ""}>
+      <section className="testimonial-section fade-in">
         <div className="container">
           <div className="row">
             <OwlCarousel
@@ -130,13 +130,13 @@ export default function Testimonial(props) {
                         <FontAwesomeIcon className="social-logo" icon={faLinkedin}  />
                       </a>
                     </div> */}
-                      <div className="testimonial-icon">
+                    <div className="testimonial-icon">
                       <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
                         <i
                           className="fa fa-linkedin-square"
                           style={{
                             color: "rgba(10,102,194)",
-                            background:'white'
+                            background: "white",
                           }}></i>
                       </a>
                       <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
@@ -150,7 +150,6 @@ export default function Testimonial(props) {
                         <i className="fa fa-facebook-square"></i>
                       </a>
                     </div>
-
                   </div>
                 </div>
               </div>
