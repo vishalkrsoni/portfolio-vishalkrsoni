@@ -2,7 +2,6 @@ import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
@@ -12,15 +11,8 @@ import vivek from "../../img/Testimonial/vivek.png";
 import urvish from "../../img/Testimonial/urvish.png";
 import jangid from "../../img/Testimonial/jangid.png";
 import ankit from "../../img/Testimonial/ankitAg.png";
-// import prem from "../../../src/img/Testimonial/prem.png";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faFacebook,
-//   faInstagram,
-//   faLinkedin,
-// } from "@fortawesome/free-brands-svg-icons";
-
 import shape from "../../img/Testimonial/shape-bg.png";
+
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {

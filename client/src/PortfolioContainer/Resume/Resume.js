@@ -117,7 +117,7 @@ const Resume = (props) => {
     },
     {
       title: "My-Moments ",
-      projectUrl: "https://talkies-8bc89.web.app/",
+      projectUrl: "https://my-moments.onrender.com",
 
       duration: { fromDate: "2020", toDate: "2021" },
       description:
