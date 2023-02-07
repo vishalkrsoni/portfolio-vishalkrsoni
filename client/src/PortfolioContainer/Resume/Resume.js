@@ -106,8 +106,18 @@ const Resume = (props) => {
       subHeading: "Technologies Used: React JS, Redux, ExpressJs, NodeJs",
     },
     {
-      title: "Chit-Chat",
-      projectUrl: "https://talkies-8bc89.web.app/",
+      title: "The Tech Geek",
+      projectUrl: "https://euphonious-halva-ae97a5.netlify.app/",
+
+      duration: { fromDate: "2020", toDate: "2021" },
+      description:
+        "A blogging website to add and read technical blogs and more",
+      subHeading:
+        "Technologies Used:  ReactJs, Mongo DB, Express Js, Node Js, Redux",
+    },
+    {
+      title: "Chit Chat",
+      projectUrl: "https://euphonious-halva-ae97a5.netlify.app/",
 
       duration: { fromDate: "2020", toDate: "2021" },
       description:
