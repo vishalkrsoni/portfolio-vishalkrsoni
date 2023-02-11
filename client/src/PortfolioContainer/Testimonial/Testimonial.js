@@ -50,7 +50,7 @@ export default function Testimonial(props) {
   return (
     <div id={props.id || ""}>
       <ScreenHeading
-        title={"Testimonial"}
+        title={"Testimonials"}
         subHeading={"What My Peers Say About Me"}
       />
       <section className="testimonial-section fade-in">
