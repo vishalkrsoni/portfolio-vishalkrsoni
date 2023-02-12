@@ -9,6 +9,9 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./ContactMe.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpLong } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -105,6 +108,7 @@ export default function ContactMe(props) {
             <h4>Send Your Email Here!</h4>
             <img src={imgBack} alt="image not found" />
           </div>
+
           <form onSubmit={submitForm}>
             <p>{banner}</p>
             <label htmlFor="name">Name</label>
@@ -132,6 +136,12 @@ export default function ContactMe(props) {
           </form>
         </div>
       </div>
+
+      {/* <div className="scroll__up__container__contact">
+        <div className="scroll__up__btn">
+          <FontAwesomeIcon className="scroll__btn" icon={faUpLong} />
+        </div>
+      </div> */}
     </div>
   );
 }

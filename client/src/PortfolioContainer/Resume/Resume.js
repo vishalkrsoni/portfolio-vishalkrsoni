@@ -4,6 +4,9 @@ import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Resume.css";
 // import { UilArrowUp } from '@iconscout/react-unicons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpLong } from "@fortawesome/free-solid-svg-icons";
+import Skills from "../Skills/Skills";
 
 
 const Resume = (props) => {
@@ -354,24 +357,36 @@ const Resume = (props) => {
   }, [fadeInSubscription]);
 
   return (
-    <div className="resume-container screen-container fade-in" id={props.id || ""}>
-      <div className="resume-content">
-        <ScreenHeading title={"Resume"} subHeading={"My Formal Bio Details"} />
-        <div className="resume-card">
-          <div className="resume-bullets">
-            <div className="bullet-container">
-              <div className="bullet-icons"></div>
-              <div className="bullets">{getBullets()}</div>
+    <div>
+      <div
+        className="resume-container screen-container fade-in"
+        id={props.id || ""}>
+        <div className="resume-content">
+          <ScreenHeading
+            title={"Resume"}
+            subHeading={"My Formal Bio Details"}
+          />
+          <div className="resume-card">
+            <div className="resume-bullets">
+              <div className="bullet-container">
+                <div className="bullet-icons"></div>
+                <div className="bullets">{getBullets()}</div>
+              </div>
             </div>
+            <div className="resume-bullet-details">{getResumeScreens()}</div>
           </div>
-          <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
-        
-      </div>
-      {/* <UilArrowUp className="navigate__arrow" style={{ background:"red", font:"24px"}}/> */}
 
+        {/* <div className="scroll__up__container">
+        <div className="scroll__up__btn">
+          <FontAwesomeIcon className="scroll__btn" icon={faUpLong} />
+        </div>
+      </div> */}
+      </div>
+      <div className="skills_scroll">
+        <Skills />
+      </div>
     </div>
-    
   );
 };
 

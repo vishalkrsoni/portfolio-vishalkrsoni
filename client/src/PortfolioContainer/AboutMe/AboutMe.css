@@ -3,8 +3,73 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0 0 0;
+  margin: 100px 0 0 0;
+  /* margin-top: 20px; */
 }
+.scroll__up__container {
+  display: flex;
+  align-self: end;
+  margin-right: 34px;
+  font-size: 20px;
+  background-color: #f3810ff4;
+  border-radius: 5px;
+  z-index: 5;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll__up__container__contact {
+  display: flex;
+  align-self: end;
+  background-color: #f3810ff4;
+  border-radius: 5px;
+  z-index: 5;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 40px;
+}
+.scroll__up__container__testi {
+  /* display: flex;
+  align-self: end; */
+  background-color: #f3810ff4;
+  border-radius: 5px;
+  z-index: 5;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+}
+
+.scroll__btn {
+  position: absolute;
+  font-size: large;
+  margin-left: 14px;
+  margin-top: 8px;
+  z-index: 5;
+  color: rgb(254, 254, 254);
+}
+
+.scroll__btn__testi {
+  position: absolute;
+  font-size: large;
+  margin-left: 14px;
+  margin-top: 8px;
+  z-index: 3;
+  color: rgb(18, 99, 181);
+  right: 15px;
+  z-index: 3;
+}
+
+.scroll__up__btn {
+  width: 40px;
+  height: 34px;
+  z-index: 5;
+  bottom: 30px;
+  right: 80px;
+}
+
 .about-me-parent {
   max-width: 1000px;
   width: 70%;

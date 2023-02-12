@@ -6,11 +6,20 @@
   position: relative;
   z-index: -1;
 }
-.social{
+.testimonial__footer__image {
+  position: relative;
+  z-index: -1;
+}
+.testimonial__btn__up {
+  margin-bottom: 30px;
+  position: absolute;
+}
+
+.social {
   padding: 6px;
   font-size: 64px;
 }
-.social-logo{
+.social-logo {
   font-size: 44px;
 }
 .testimonial-section::before {
@@ -24,6 +33,10 @@
   opacity: 0.85;
   background-color: #1f2235;
 }
+
+.testi__footer {
+}
+
 .footer-image {
   width: 100%;
   height: 100%;
@@ -34,6 +47,7 @@
   margin-top: -110px;
 }
 .footer-image img {
+  position: relative;
   max-width: 100%;
   height: 130px;
 }
@@ -98,7 +112,7 @@
   padding: 5px;
   font-size: 24px;
 }
-.social-logo:hover{
+.social-logo:hover {
   color: aqua;
 }
 

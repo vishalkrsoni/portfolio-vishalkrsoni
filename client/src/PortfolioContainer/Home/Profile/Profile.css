@@ -3,8 +3,9 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  height: 10%;
+  height: 20%;
   min-height: fit-content;
+  margin-bottom: 95px;
 }
 .profile-parent {
   display: flex;
@@ -69,12 +70,10 @@
   transform: scale(1.07);
   transition: 1s ease-out;
 }
-.colz-icon{
+.colz-icon {
   color: aqua;
 }
 .colz .colz-icon a i {
-
-
   color: rgba(235, 233, 230, 0.993);
   padding: 14px;
   padding-left: 0;

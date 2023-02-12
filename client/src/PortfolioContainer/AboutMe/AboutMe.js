@@ -3,6 +3,11 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./AboutMe.css";
+// import { AiOutlineArrowUp } from "react-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUpLong,
+} from "@fortawesome/free-solid-svg-icons";
 
 const AboutMe = (props) => {
   let fadeInScreenHandler = (screen) => {
@@ -70,6 +75,12 @@ const AboutMe = (props) => {
           </div>
         </div>
       </div>
+
+      {/* <div className="scroll__up__container">
+        <div className="scroll__up__btn">
+          <FontAwesomeIcon className="scroll__btn" icon={faUpLong} />
+        </div>
+      </div> */}
     </div>
   );
 };
