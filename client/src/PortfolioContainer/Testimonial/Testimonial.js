@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -46,6 +46,25 @@ export default function Testimonial(props) {
       },
     },
   };
+
+
+ const [showButton, setShowButton] = useState(false);
+
+ const handleScroll = () => {
+   if (window.pageYOffset > 10) {
+     setShowButton(true);
+   } else {
+     setShowButton(false);
+   }
+ };
+
+ useEffect(() => {
+   window.addEventListener("scroll", handleScroll);
+
+   return () => {
+     window.removeEventListener("scroll", handleScroll);
+   };
+ }, []);
 
   return (
     <div id={props.id || ""}>
@@ -323,14 +342,14 @@ export default function Testimonial(props) {
         />
       </div>
 
-      <div className="scroll__up__container__testi">
-        <div className="scroll__up__btn">
-          <FontAwesomeIcon
-            className="scroll__btn"
-            icon={faUpLong}
-            onClick={() => ScrollService.scrollHandler.scrollToHome()}
-          />
-        </div>
+      <div className="scroll__up__container">
+        <button
+          className={`scroll__up__btn ${
+            showButton ? "show__scroll" : "hide__scroll"
+          }`}
+          onClick={() => ScrollService.scrollHandler.scrollToHome()}>
+          <FontAwesomeIcon className="arrow__up__icon" icon={faUpLong} />
+        </button>
       </div>
     </div>
   );

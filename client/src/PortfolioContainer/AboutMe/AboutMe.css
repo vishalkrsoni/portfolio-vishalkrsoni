@@ -4,70 +4,36 @@
   justify-content: center;
   align-items: center;
   margin: 100px 0 0 0;
-  /* margin-top: 20px; */
 }
+
 .scroll__up__container {
-  display: flex;
-  align-self: end;
-  margin-right: 34px;
-  font-size: 20px;
-  background-color: #f3810ff4;
-  border-radius: 5px;
+  border-radius: 6px;
+  border: none;
   z-index: 5;
-  align-items: center;
-  justify-content: center;
-}
-
-.scroll__up__container__contact {
-  display: flex;
-  align-self: end;
-  background-color: #f3810ff4;
-  border-radius: 5px;
-  z-index: 5;
+  background-color: none;
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: 40px;
-}
-.scroll__up__container__testi {
-  /* display: flex;
-  align-self: end; */
-  background-color: #f3810ff4;
-  border-radius: 5px;
-  z-index: 5;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  right: 40px;
-  bottom: 30px;
-}
+  right: 30px;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.026);
 
-.scroll__btn {
-  position: absolute;
-  font-size: large;
-  margin-left: 14px;
-  margin-top: 8px;
-  z-index: 5;
-  color: rgb(254, 254, 254);
-}
-
-.scroll__btn__testi {
-  position: absolute;
-  font-size: large;
-  margin-left: 14px;
-  margin-top: 8px;
-  z-index: 3;
-  color: rgb(18, 99, 181);
-  right: 15px;
-  z-index: 3;
 }
 
 .scroll__up__btn {
-  width: 40px;
-  height: 34px;
+  border-radius: 6px;
+  border: none;
+  width: 44px;
+  height: 38px;
   z-index: 5;
-  bottom: 30px;
-  right: 80px;
+  background-color: rgba(255, 255, 255, 0.026);
+  /* background-color: #ff5823; */
+  color: tomato;
+  /* color: white; */
+}
+.arrow__up__icon{
+  /* font-size:22px; */
+  /* height: 18px; */
 }
 
 .about-me-parent {
