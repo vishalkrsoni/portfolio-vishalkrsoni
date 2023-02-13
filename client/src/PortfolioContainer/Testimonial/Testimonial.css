@@ -1,5 +1,11 @@
+.testimonial__container{
+
+  margin-top: 0.5rem;
+}
+
+
 .testimonial-section {
-  padding: 80px 0 80px;
+  padding: 45px 0 80px;
   background-image: url("../../../src/assets/Testimonial/bg-1.jpg");
   background-position: center;
   background-attachment: fixed;

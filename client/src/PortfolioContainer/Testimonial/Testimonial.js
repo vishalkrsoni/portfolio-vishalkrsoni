@@ -67,7 +67,7 @@ export default function Testimonial(props) {
  }, []);
 
   return (
-    <div id={props.id || ""}>
+    <div id={props.id || ""}  className="testimonial__container">
       <ScreenHeading
         title={"Testimonials"}
         subHeading={"What My Peers Say About Me"}
@@ -85,8 +85,8 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I have worked neck-to-neck with Vishal and build a
-                      self-sustainable ecosystem for our FMCG Start-Up. He is a
+                      We build a
+                      self-sustainable ecosystem for our FMCG Start-Up together. He is a
                       gem of a person. He can figure out the problem areas and
                       execute real-time changes quickly. He has also gained
                       extensive experience with operations management and
@@ -149,7 +149,7 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      Working with Vishal was better than expected and we had
+                      Working with Vishal was good and we had
                       really high expectations. He is always ready to learn new
                       things by doing all the research about best practices and
                       implementing them. I believe he is a very talented and
@@ -210,8 +210,7 @@ export default function Testimonial(props) {
                     <p>
                       <i className="fa fa-quote-left" />
                       Vishal deeply understands his work and gets things done
-                      efficiently and correctly in accordance with best
-                      practices.The entire management expresses gratitude to
+                      efficiently in accordance with best practices. The entire management expresses gratitude to
                       him. Along with adding value in the product developement
                       and adding valuable ideas time to time, he always get
                       things done on time.
@@ -269,9 +268,9 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I have worked with Vishal during PrepLeaf phase. He always
-                      supported us and exceeded our expectations in every way.
-                      Not only was our experience personal and friendly, his
+                      I have worked with Vishal during PrepLeaf phase.He always
+                      supported  and exceeded our expectations in every way.
+                      Not only was our experience friendly, his
                       ability to identify and present our key messages in an
                       imaginative and creative way gave us a huge amount of
                       confidence in him

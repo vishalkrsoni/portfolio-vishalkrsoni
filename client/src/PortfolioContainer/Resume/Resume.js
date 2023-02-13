@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpLong } from "@fortawesome/free-solid-svg-icons";
 import Skills from "../Skills/Skills";
 
-
 const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
@@ -27,7 +26,6 @@ const Resume = (props) => {
         <div className="resume-main-heading">
           <div className="heading-bullet"> </div>
           <span>
-            
             {props.category === "projects" ? (
               <a href={props.projectUrl ? props.projectUrl : " "}>
                 {props.heading ? props.heading : ""}
@@ -76,8 +74,6 @@ const Resume = (props) => {
     { skill: "HTML", ratingPercentage: 95 },
     { skill: "CSS", ratingPercentage: 90 },
     { skill: "SQL", ratingPercentage: 95 },
-   
-
   ];
 
   const projectsDetails = [
@@ -358,10 +354,8 @@ const Resume = (props) => {
 
   return (
     <div>
-      <div
-        className="resume-container screen-container fade-in"
-        id={props.id || ""}>
-        <div className="resume-content">
+      <div className="resume-container screen-container fade-in">
+        <div className="resume-content" id={props.id || ""}>
           <ScreenHeading
             title={"Resume"}
             subHeading={"My Formal Bio Details"}
@@ -383,8 +377,12 @@ const Resume = (props) => {
         </div>
       </div> */}
       </div>
-      <div className="skills_scroll">
-        <Skills />
+
+      <div className="skill__scroll__container">
+        <ScreenHeading title={"Skills"} className="skill__scroll__heading" />
+        <div className="skills_scroll">
+          <Skills />
+        </div>
       </div>
     </div>
   );
