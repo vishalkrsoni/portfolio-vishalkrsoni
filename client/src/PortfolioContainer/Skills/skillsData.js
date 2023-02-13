@@ -1,26 +1,30 @@
 export const skillsData = [
+  "C",
+  "Java",
   "Javascript",
   "Node Js",
   "React",
-  "CSS",
-  "Java",
-  "Git",
-  "HTML",
-  "Bootstrap",
-  // "Typescript",
+  "React Tsx",
+  "Vite Js",
   "MongoDB",
-  "Tailwind",
   "MySQL",
-  "PostgreSQL",
+  "AWS",
+  "DSA",
+  "HTML",
+  "CSS",
+  "Git",
+  "Bootstrap",
+  "Tailwind",
   "MaterialUI",
+
+  "SpringBoot",
+  "Hibernate",
+  "Selenium",
+
+  "PostgreSQL",
   "Docker",
   "Firebase",
-  "AWS",
-  "Selenium",
-  "C",
-  "React Typescript",
 ];
-
 
 // AVAILABLE SKILLS
 
