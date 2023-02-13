@@ -1,12 +1,9 @@
 import React from "react";
-import Typical from "react-typical";
+// import Typical from "react-typical";
 import Typed from "react-typed";
 
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
-// import AnimatedText from "react-animated-text-content";
-// import * as Unicons from "@iconscout/react-unicons";
-// import { UilArrowUp } from '@iconscout/react-unicons'
 
 const Profile = () => {
   return (

@@ -7,6 +7,7 @@ import ScrollService from "../../../utilities/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
+import { faUpLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const [selectedScreen, setSelectedScreen] = useState(0);
@@ -49,12 +50,35 @@ export default function Header() {
     setSelectedScreen(index);
     setShowHeaderOptions(false);
   };
+  
+  const [showScroll, handleShowScroll] = useState(false);
+  const transitionScrollButton = () => {
+    if (window.scrollY > 100) {
+      handleShowScroll(true);
+    } else {
+      handleShowScroll(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, c - c / 20);
+      setSelectedScreen(0);
+    }
+  };
 
   useEffect(() => {
     return () => {
       currentScreenSubscription.unsubscribe();
     };
   }, [currentScreenSubscription]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", transitionScrollButton);
+    return () => window.removeEventListener("scroll", transitionScrollButton);
+  }, []);
 
   return (
     <div
@@ -77,6 +101,15 @@ export default function Header() {
           }>
           {getHeaderOptions()}
         </div>
+      </div>
+      <div className="scroll__up__container">
+        <button
+          className={`scroll__up__btn ${
+            showScroll ? "show__scroll" : "hide__scroll"
+          }`}
+          onClick={scrollToTop }>
+          <FontAwesomeIcon className="arrow__up__icon" icon={faUpLong} />
+        </button>
       </div>
     </div>
   );

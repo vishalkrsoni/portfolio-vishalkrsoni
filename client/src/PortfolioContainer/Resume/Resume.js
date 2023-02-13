@@ -3,9 +3,6 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Resume.css";
-// import { UilArrowUp } from '@iconscout/react-unicons'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUpLong } from "@fortawesome/free-solid-svg-icons";
 import Skills from "../Skills/Skills";
 
 const Resume = (props) => {

@@ -11,9 +11,6 @@ import urvish from "../../img/Testimonial/urvish.png";
 import jangid from "../../img/Testimonial/jangid.png";
 import ankit from "../../img/Testimonial/ankitAg.png";
 import shape from "../../img/Testimonial/shape-bg.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUpLong } from "@fortawesome/free-solid-svg-icons";
-import { TOTAL_SCREENS, GET_SCREEN_INDEX } from "../../utilities/commonUtils";
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {
@@ -47,28 +44,6 @@ export default function Testimonial(props) {
       },
     },
   };
-
-  const [showScroll, handleShowScroll] = useState(false);
-  const transitionScrollButton = () => {
-    if (window.scrollY > 100) {
-      handleShowScroll(true);
-    } else {
-      handleShowScroll(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    const c = document.documentElement.scrollTop || document.body.scrollTop;
-    if (c > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, c - c / 20);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", transitionScrollButton);
-    return () => window.removeEventListener("scroll", transitionScrollButton);
-  }, []);
 
   return (
     <div id={props.id || ""} className="testimonial__container">
@@ -342,16 +317,6 @@ export default function Testimonial(props) {
           alt="pic not responding"
           className="testimonial__footer__image"
         />
-      </div>
-
-      <div className="scroll__up__container">
-        <button
-          className={`scroll__up__btn ${
-            showScroll ? "show__scroll" : "hide__scroll"
-          }`}
-          onClick={scrollToTop}>
-          <FontAwesomeIcon className="arrow__up__icon" icon={faUpLong} />
-        </button>
       </div>
     </div>
   );
