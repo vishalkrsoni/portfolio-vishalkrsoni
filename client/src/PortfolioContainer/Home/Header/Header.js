@@ -8,7 +8,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 import { faUpLong } from "@fortawesome/free-solid-svg-icons";
-
+import appLogo from '../../../assets/appLogo.svg'
 export default function Header() {
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
@@ -91,7 +91,9 @@ export default function Header() {
           <FontAwesomeIcon className="header-hmburger-bars" icon={faBars} />
         </div>
         <div className="header-logo">
-          <span>Vishal</span>
+          <span>
+            <img src={appLogo} alt="" srcset="" style={{}}/>
+          </span>
         </div>
         <div
           className={
@@ -107,7 +109,7 @@ export default function Header() {
           className={`scroll__up__btn ${
             showScroll ? "show__scroll" : "hide__scroll"
           }`}
-          onClick={scrollToTop }>
+          onClick={scrollToTop}>
           <FontAwesomeIcon className="arrow__up__icon" icon={faUpLong} />
         </button>
       </div>
