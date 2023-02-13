@@ -59,7 +59,7 @@ const AboutMe = (props) => {
             <div className="about-me-options">
               <button
                 className="btn primary-btn"
-                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
+                onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
                 {" "}
                 Hire Me{" "}
               </button>
@@ -70,12 +70,6 @@ const AboutMe = (props) => {
           </div>
         </div>
       </div>
-
-      {/* <div className="scroll__up__container">
-        <div className="scroll__up__btn">
-          <FontAwesomeIcon className="scroll__btn" icon={faUpLong} />
-        </div>
-      </div> */}
     </div>
   );
 };

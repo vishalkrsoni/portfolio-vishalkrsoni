@@ -367,12 +367,6 @@ const Resume = (props) => {
             <div className="resume-bullet-details">{getResumeScreens()}</div>
           </div>
         </div>
-
-        {/* <div className="scroll__up__container">
-        <div className="scroll__up__btn">
-          <FontAwesomeIcon className="scroll__btn" icon={faUpLong} />
-        </div>
-      </div> */}
       </div>
 
       <div className="skill__scroll__container">

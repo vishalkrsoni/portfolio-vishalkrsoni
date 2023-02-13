@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import "./Footer.css";
-// import * as Unicons from '@iconscout/react-unicons';
 
 export default function footer() {
   return (

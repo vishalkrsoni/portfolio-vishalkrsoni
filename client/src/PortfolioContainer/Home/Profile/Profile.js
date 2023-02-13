@@ -1,9 +1,6 @@
 import React from "react";
-// import Typical from "react-typical";
 import Typed from "react-typed";
-
 import "./Profile.css";
-import ScrollService from "../../../utilities/ScrollService";
 
 const Profile = () => {
   return (
@@ -80,7 +77,7 @@ const Profile = () => {
           <div className="profile-options">
             <button
               className="btn primary-btn"
-              onClick={() => ScrollService.scrollToHireMe()}>
+              onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
               {""}
               Hire Me{" "}
             </button>
@@ -96,7 +93,6 @@ const Profile = () => {
         <div className="profile-picture">
           <div className="profile-picture-background"></div>
         </div>
-
       </div>
     </div>
   );
