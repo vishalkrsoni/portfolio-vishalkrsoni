@@ -13,6 +13,7 @@ import ankit from "../../img/Testimonial/ankitAg.png";
 import shape from "../../img/Testimonial/shape-bg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpLong } from "@fortawesome/free-solid-svg-icons";
+import { TOTAL_SCREENS, GET_SCREEN_INDEX } from "../../utilities/commonUtils";
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {
@@ -56,6 +57,14 @@ export default function Testimonial(props) {
     }
   };
 
+  const scrollToTop = () => {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, c - c / 20);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", transitionScrollButton);
     return () => window.removeEventListener("scroll", transitionScrollButton);
@@ -67,6 +76,7 @@ export default function Testimonial(props) {
         title={"Testimonials"}
         subHeading={"What My Peers Say About Me"}
       />
+
       <section className="testimonial-section fade-in">
         <div className="container">
           <div className="row">
@@ -339,7 +349,7 @@ export default function Testimonial(props) {
           className={`scroll__up__btn ${
             showScroll ? "show__scroll" : "hide__scroll"
           }`}
-          onClick={() => ScrollService.scrollToHome()}>
+          onClick={scrollToTop}>
           <FontAwesomeIcon className="arrow__up__icon" icon={faUpLong} />
         </button>
       </div>
