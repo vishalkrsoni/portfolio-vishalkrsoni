@@ -4,8 +4,6 @@
   align-items: center;
   justify-content: flex-start;
   min-height: fit-content;
-  /* background-color: #a33939; */
-  /* padding: 2.5rem 2rem 2rem 2rem; */
 }
 
 .skillsHeader {
@@ -14,13 +12,6 @@
   justify-content: center;
 }
 
-.skillsHeader h2 {
-  /* font-family: var(--primaryFont); */
-  font-style: normal;
-  /* font-weight: bold; */
-  font-size: 2.5rem;
-  text-align: center;
-}
 
 .skillsContainer {
   display: flex;
@@ -28,10 +19,9 @@
   justify-content: center;
   width: 98%;
   height: 180px;
-  margin-top: -0.2rem;
+  margin-top: -0.5rem;
   margin-bottom: 8rem;
   padding: 0 5rem;
-  /* background-color: #fffefe; */
 }
 
 .skill--scroll {
@@ -42,8 +32,8 @@
 .skill--box {
   background: #ffffff;
   border-radius: 10px;
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
   margin: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -52,13 +42,13 @@
   padding: 2rem 1rem;
   transition: 300ms ease-in-out;
   box-shadow: 0px 10px 20px rgba(24, 20, 18, 0.325),
-    rgba(186, 182, 179, 0.449) 0px 30px 60px -12px inset,
+    rgba(160, 177, 240, 0.449) 0px 30px 60px -12px inset,
     rgba(207, 201, 193, 0.58) 0px 18px 36px -18px inset;
-  /* box-shadow: rgba(240, 145, 29, 0.408) 0px -50px 36px -28px inset; */
 }
 
 .skill--box:hover {
   transform: scale(1.15);
+  scroll-behavior: smooth;
 }
 
 .skill--box > img {
