@@ -59,10 +59,10 @@
 .skill--box h3 {
   font-family: Big Shoulders Text;
   font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
+  font-weight: 850;
+  font-size: 16px;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .marquee {
