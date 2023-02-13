@@ -1,9 +1,6 @@
-.testimonial__container{
-
+.testimonial__container {
   margin-top: 0.5rem;
 }
-
-
 .testimonial-section {
   padding: 45px 0 80px;
   background-image: url("../../../src/assets/Testimonial/bg-1.jpg");
@@ -39,7 +36,6 @@
   opacity: 0.85;
   background-color: #1f2235;
 }
-
 
 .footer-image {
   width: 100%;
