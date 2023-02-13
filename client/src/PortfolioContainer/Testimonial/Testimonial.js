@@ -48,23 +48,19 @@ export default function Testimonial(props) {
   };
 
 
- const [showButton, setShowButton] = useState(false);
-
- const handleScroll = () => {
-   if (window.pageYOffset > 10) {
-     setShowButton(true);
-   } else {
-     setShowButton(false);
-   }
- };
-
- useEffect(() => {
-   window.addEventListener("scroll", handleScroll);
-
-   return () => {
-     window.removeEventListener("scroll", handleScroll);
+   const [showScroll, handleShowScroll] = useState(false);
+   const transitionScrollButton = () => {
+     if (window.scrollY > 100) {
+       handleShowScroll(true);
+     } else {
+       handleShowScroll(false);
+     }
    };
- }, []);
+
+   useEffect(() => {
+     window.addEventListener("scroll", transitionScrollButton);
+     return () => window.removeEventListener("scroll", transitionScrollButton);
+   }, []);
 
   return (
     <div id={props.id || ""}  className="testimonial__container">
@@ -344,7 +340,7 @@ export default function Testimonial(props) {
       <div className="scroll__up__container">
         <button
           className={`scroll__up__btn ${
-            showButton ? "show__scroll" : "hide__scroll"
+            showScroll ? "show__scroll" : "hide__scroll"
           }`}
           onClick={() => ScrollService.scrollHandler.scrollToHome()}>
           <FontAwesomeIcon className="arrow__up__icon" icon={faUpLong} />

@@ -6,35 +6,6 @@
   margin: 100px 0 0 0;
 }
 
-.scroll__up__container {
-  border-radius: 6px;
-  border: none;
-  z-index: 5;
-  background-color: none;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  right: 30px;
-  bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.026);
-
-}
-
-.scroll__up__btn {
-  border-radius: 6px;
-  border: none;
-  width: 44px;
-  height: 38px;
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.026);
-  /* background-color: #ff5823; */
-  color: tomato;
-  /* color: white; */
-}
-.arrow__up__icon{
-  /* font-size:22px; */
-  /* height: 18px; */
-}
 
 .about-me-parent {
   max-width: 1000px;

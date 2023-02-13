@@ -138,3 +138,34 @@
   margin-right: 5px;
   color: tomato;
 } */
+
+.scroll__up__container {
+  border-radius: 6px;
+  border: none;
+  z-index: 5;
+  background-color: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.026);
+}
+
+.scroll__up__btn {
+  border-radius: 6px;
+  border: none;
+  width: 44px;
+  height: 38px;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.026);
+  color: tomato;
+}
+
+.show__scroll {
+  background-color: rgba(243, 244, 236, 0.66);
+}
+
+.hide__scroll {
+  display: none;
+}
