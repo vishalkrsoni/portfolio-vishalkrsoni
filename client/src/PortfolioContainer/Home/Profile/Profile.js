@@ -1,5 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
+import Typed from "react-typed";
+
 import "./Profile.css";
 import ScrollService from "../../../utilities/ScrollService";
 // import AnimatedText from "react-animated-text-content";
@@ -44,7 +46,7 @@ const Profile = () => {
               {" "}
               <h1>
                 {" "}
-                <Typical
+                {/* <Typical
                   loop={Infinity}
                   wrapper="b"
                   steps={[
@@ -57,6 +59,19 @@ const Profile = () => {
                     "MERN Stack Dev 🗄️",
                     1500,
                   ]}
+                /> */}
+                <Typed
+                  strings={[
+                    "Full Stack  Dev 💻",
+                    "Front End Dev 🧮",
+                    "Back End Dev 🗄️",
+                    "MERN Stack Dev 🗄️",
+                  ]}
+                  typeSpeed={30}
+                  backSpeed={50}
+                  className="typed-header"
+                  // style={{ fontSize: "25px" }}
+                  loop
                 />
               </h1>{" "}
               <span className="profile-role-tagline">
@@ -85,10 +100,8 @@ const Profile = () => {
           <div className="profile-picture-background"></div>
         </div>
 
-      {/* <UilArrowUp  /> */}
-
+        {/* <UilArrowUp  /> */}
       </div>
-
     </div>
   );
 };
