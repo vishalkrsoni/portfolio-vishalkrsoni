@@ -100,7 +100,6 @@ const Profile = () => {
           <div className="profile-picture-background"></div>
         </div>
 
-        {/* <UilArrowUp  /> */}
       </div>
     </div>
   );
