@@ -149,7 +149,6 @@
   position: fixed;
   right: 30px;
   bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.026);
 }
 
 .scroll__up__btn {
@@ -158,12 +157,27 @@
   width: 44px;
   height: 38px;
   z-index: 5;
-  background-color: rgba(255, 255, 255, 0.026);
   color: tomato;
 }
 
+
+.scroll__up__container .show__scroll:focus {
+    outline: none !important;
+    
+}
+
+.scroll__up__container:hover {
+  background-color: tomato;
+}
+.scroll__up__btn:hover {
+  color: white;
+}
+.scroll__up__container .show__scroll:hover {
+  background-color: tomato;
+  border: none;
+}
 .show__scroll {
-  background-color: rgba(243, 244, 236, 0.66);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .hide__scroll {
