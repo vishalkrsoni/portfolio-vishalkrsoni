@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from "react";
-import Typical from "react-typical";
+import Typed from "react-typed";
+
 import axios from "axios";
 import { toast } from "react-toastify";
 import imgBack from "../../images/mailz2.jpeg";
@@ -46,7 +47,11 @@ export default function ContactMe(props) {
       };
       setBool(true);
 
-      const res = await axios.post(`/contact`, data);
+      const res = await axios({
+        method: "post",
+        url: `http://localhost:8080/contact`,
+        data,
+      });
 
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
@@ -72,17 +77,16 @@ export default function ContactMe(props) {
         <div className="col">
           <h2 className="title">
             {" "}
-            <Typical
-              loop={Infinity}
-              wrapper="b"
-              steps={[
+            <Typed
+              strings={[
                 "Get In Touch 🤝",
-                2200,
                 "Email Me And 📧",
-                2200,
                 "Get Your Job Done! 👍🏻",
-                2200,
               ]}
+              typeSpeed={70}
+              backSpeed={30}
+              className="typed-header"
+              loop
             />
           </h2>{" "}
           <a href="https://www.facebook.com/vishalkrsoni">

@@ -52,7 +52,7 @@ import svelte from '../../assets/skills/svelte.svg'
 import swift from '../../assets/skills/swift.svg'
 import tailwind from '../../assets/skills/tailwind.svg'
 import tensorflow from '../../assets/skills/tensorflow.svg'
-import typescript from '../../assets/skills/typescript.svg'
+import typescript from '../../assets/skills/reactTsx.svg'
 import vitejs from '../../assets/skills/vitejs.svg'
 import vue from '../../assets/skills/vue.svg'
 import vuetifyjs from '../../assets/skills/vuetifyjs.svg'
@@ -73,7 +73,6 @@ import picsart from '../../assets/skills/picsart.svg'
 import sketch from '../../assets/skills/sketch.svg'
 import unity from '../../assets/skills/unity.svg'
 import wolframalpha from '../../assets/skills/wolframalpha.svg'
-
 import canva from '../../assets/skills/canva.svg'
 
 
@@ -110,7 +109,7 @@ export const skillsImage = (skill) => {
             return nodeJs;
         case 'svelte':
             return svelte;
-        case 'typescript':
+        case 'react typescript':
             return typescript;
         case 'vue':
             return vue;
