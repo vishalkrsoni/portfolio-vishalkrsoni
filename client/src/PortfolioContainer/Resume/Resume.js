@@ -24,7 +24,7 @@ const Resume = (props) => {
           <div className="heading-bullet"> </div>
           <span>
             {props.category === "projects" ? (
-              <a href={props.projectUrl ? props.projectUrl : " "}>
+              <a href={props.projectUrl ? props.projectUrl : ""}>
                 {props.heading ? props.heading : ""}
               </a>
             ) : props.heading ? (
@@ -35,7 +35,7 @@ const Resume = (props) => {
           </span>
           {props.fromDate && props.toDate ? (
             <div className="heading-date">
-              {props.fromDate + "-" + props.toDate}
+              {props.fromDate +"-"+ props.toDate}
             </div>
           ) : (
             <div></div>

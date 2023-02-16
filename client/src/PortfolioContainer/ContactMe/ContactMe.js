@@ -47,19 +47,15 @@ export default function ContactMe(props) {
       };
       setBool(true);
 
-      const res = await axios({
-        method: "post",
-        url: `http://localhost:8080/contact`,
-        data,
-      });
+      const res = await axios.post(`http://localhost:8080/contact`, data);
 
       if (name.length === 0 || email.length === 0 || message.length === 0) {
-        setBanner(res.data.msg);
-        toast.error(res.data.msg);
+        setBanner(res.data.message);
+        toast.error(res.data.message);
         setBool(false);
       } else if (res.status === 200) {
-        setBanner(res.data.msg);
-        toast.success(res.data.msg);
+        setBanner(res.data.message);
+        toast.success(res.data.message);
         setBool(false);
         setName("");
         setEmail("");
@@ -67,6 +63,7 @@ export default function ContactMe(props) {
       }
     } catch (error) {
       console.log(error);
+      
     }
   };
 
