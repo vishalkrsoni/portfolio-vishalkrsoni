@@ -60,10 +60,13 @@ export default function ContactMe(props) {
         setName("");
         setEmail("");
         setMessage("");
+        setTimeout(() => {
+          window.location.reload(false);
+          window.scrollTo(0, 0);
+        }, 3000);
       }
     } catch (error) {
       console.log(error);
-      
     }
   };
 
