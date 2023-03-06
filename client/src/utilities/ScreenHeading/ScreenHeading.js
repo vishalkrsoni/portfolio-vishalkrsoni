@@ -1,15 +1,15 @@
 import React from "react";
 import "./ScreenHeading.css";
 
-const ScreenHeading = (props) => {
+const ScreenHeading = ({ title, subHeading }) => {
   return (
     <div className="heading-container">
       <div className="screen-heading">
-        <span>{props.title}</span>
+        <span>{title}</span>
       </div>
-      {props.subHeading ? (
+      {subHeading ? (
         <div className="screen-sub-heading">
-          <span>{props.subHeading}</span>
+          <span>{subHeading}</span>
         </div>
       ) : (
         <div></div>

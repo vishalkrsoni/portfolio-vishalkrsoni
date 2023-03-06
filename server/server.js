@@ -33,6 +33,7 @@ const sendEmail = async (transporter, name, email, message) => {
       text: message,
     };
 
+
     await transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         throw new Error(`Error sending email: ${error}`);
@@ -44,6 +45,7 @@ const sendEmail = async (transporter, name, email, message) => {
     console.error(error);
   }
 };
+
 
 const sendContactInfo = async (req, res) => {
   const { name, email, message } = req.body;
@@ -72,7 +74,6 @@ const sendContactInfo = async (req, res) => {
   }
 
 };
-
 
 
 app.use(cors());
