@@ -4,6 +4,10 @@ import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./Resume.css";
 import Skills from "../Skills/Skills";
+import { resumeBullets } from "./resumeBullets";
+import { programmingSkillsDetails } from "./programmingSkillsDetails";
+import { projectsDetails } from "./projectDetails";
+
 
 const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
@@ -35,7 +39,7 @@ const Resume = (props) => {
           </span>
           {props.fromDate && props.toDate ? (
             <div className="heading-date">
-              {props.fromDate +"-"+ props.toDate}
+              {props.fromDate + "-" + props.toDate}
             </div>
           ) : (
             <div></div>
@@ -50,88 +54,6 @@ const Resume = (props) => {
       </div>
     );
   };
-
-  /* STATIC RESUME DATA FOR THE LABELS*/
-  const resumeBullets = [
-    { label: "Education", logoSrc: "education.svg" },
-    { label: "Work History", logoSrc: "work-history.svg" },
-    { label: "Programming Skills", logoSrc: "programming-skills.svg" },
-    { label: "Projects", logoSrc: "projects.svg" },
-    { label: "Interests", logoSrc: "interests.svg" },
-  ];
-
-  const programmingSkillsDetails = [
-    { skill: "JavaScript", ratingPercentage: 97 },
-    { skill: "React JS", ratingPercentage: 91 },
-    { skill: "Express JS", ratingPercentage: 89 },
-    { skill: "Node JS", ratingPercentage: 89 },
-    { skill: "Mongo Db", ratingPercentage: 90 },
-    { skill: "Core Java", ratingPercentage: 85 },
-    { skill: "SpringBoot", ratingPercentage: 80 },
-    { skill: "HTML", ratingPercentage: 95 },
-    { skill: "CSS", ratingPercentage: 90 },
-    { skill: "SQL", ratingPercentage: 95 },
-  ];
-
-  const projectsDetails = [
-    {
-      title: "Personal Portfolio Website",
-      projectUrl: "https://portfolio-vishalkrsoni.web.app/",
-      duration: { fromDate: "June'22", toDate: "July'22" },
-      description:
-        "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: ReactJs, Bootsrap, NodeJs, ExpressJs ",
-    },
-    {
-      title: "Talkies",
-      projectUrl: "https://talkies-8bc89.web.app/",
-
-      duration: { fromDate: "Sept'22", toDate: "Nov'22" },
-      description:
-        "A movie platform which can handle a load of 10000 users. Where users can watch their favourite movies and Web-Series. I've also implemented subscription model and Stripe payment module",
-      subHeading:
-        "Technologies Used: FireBase, ReactJs, NodeJs, ExpressJs, Stripe",
-    },
-    {
-      title: "Easy-Buy",
-      projectUrl: "https://talkies-8bc89.web.app/",
-
-      duration: { fromDate: "2020", toDate: "2021" },
-      description:
-        "An ecommerce application designed to sell products online wth payment system integration place.",
-      subHeading: "Technologies Used: React JS, Redux, ExpressJs, NodeJs",
-    },
-    {
-      title: "The Tech Geek",
-      projectUrl: "https://euphonious-halva-ae97a5.netlify.app/",
-
-      duration: { fromDate: "2020", toDate: "2021" },
-      description:
-        "A blogging website to add and read technical blogs and more",
-      subHeading:
-        "Technologies Used:  ReactJs, Mongo DB, Express Js, Node Js, Redux",
-    },
-    {
-      title: "Chit Chat",
-      projectUrl: "https://euphonious-halva-ae97a5.netlify.app/",
-
-      duration: { fromDate: "2020", toDate: "2021" },
-      description:
-        "A real-time chatting application which provides us calling feature as well.",
-      subHeading:
-        "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux,SocketIo",
-    },
-    {
-      title: "My-Moments ",
-      projectUrl: "https://my-moments.onrender.com",
-
-      duration: { fromDate: "2020", toDate: "2021" },
-      description:
-        "An application which allows users to share theirs momeries by sharing their memories in terms of Images and GeoLocation",
-      subHeading:
-        "Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Google-Geo-Location",
-    },
-  ];
 
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
