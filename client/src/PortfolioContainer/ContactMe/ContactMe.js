@@ -80,6 +80,7 @@ export default function ContactMe(props) {
             <Typed
               strings={[
                 "Get In Touch 🤝",
+                "+91-7838516299 ",
                 "Email Me And 📧",
                 "Get Your Job Done! 👍🏻",
               ]}
