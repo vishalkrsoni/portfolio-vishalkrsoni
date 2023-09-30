@@ -35,7 +35,7 @@ const Resume = (props) => {
           </span>
           {props.fromDate && props.toDate ? (
             <div className="heading-date">
-              {props.fromDate +"-"+ props.toDate}
+              {props.fromDate + "-" + props.toDate}
             </div>
           ) : (
             <div></div>
@@ -162,31 +162,84 @@ const Resume = (props) => {
       key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"IndoAlpine Labs"}
-          subHeading={"Operations Head"}
-          fromDate={"Jan'18"}
-          toDate={"Oct'19"}
+          heading={"Lancesoft (Client-Lentra AI)"}
+          subHeading={"Mern Stack developer"}
+          fromDate={"Apr'23"}
+          toDate={"Oct'23"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Worked on operations and marketing and the strategies.
+            - Leveraged Vite.js to create a high-performance web application.
+            Utilized Redux Toolkit and Thunk middleware for efficient state
+            management and asynchronous API calls.
           </span>
         </div>
 
         <div className="experience-description">
           <span className="resume-description-text">
-            - Managed front desk operations and customer interactions. Evaluated
-            workflow and productivity by making changes where necessary.
+            - Implemented Storybook for React app documentation.
           </span>
           <br />
           <span className="resume-description-text">
-            - Identified and resolved unauthorized, unsafe or ineffective
-            practices, requirements and challenges of our business.
+            - Automated API documentation using Swagger and API-curio.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            - Set up Bitbucket pipelines for code commits.
           </span>
           <br />
           <span className="resume-description-text">
-            -Arranged necessary meetings with the suppliers and smoothly cracked
-            the deal.{" "}
+            - Implemented robust authentication and authorization mechanisms to
+            ensure data security and user access control.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - Enforced coding best practices by configuring Eslint and Prettier,
+            ensuring codebase consistency and adherence to coding guidelines.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - Established the foundational infrastructure for a
+            microservices-based backend system, enhancing scalability and
+            modularity.{" "}
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            - Configured the Winston logger to provide comprehensive log
+            management, aiding in debugging and error tracking.{" "}
+          </span>
+          <br />
+        </div>
+      </div>
+
+      <div className="experience-container">
+        <ResumeHeading
+          heading={"FlipTree Technologies"}
+          subHeading={"SERVER DEVELOPER"}
+          fromDate={"Feb'22"}
+          toDate={"June'22"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Worked as a server developer using Java and NodeJs.
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Effectively coded software changes and alterations based on
+            specific design specifications for FlipTree app.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - Implemented the API's required for our Lumi matrimony app, after
+            learning JavaScript and NodeJs technologies.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            -Successfully identified, diagnosed, and fixed website problems,
+            including broken links, typographical errors, and formatting issues.{" "}
           </span>
           <br />
         </div>
@@ -201,7 +254,7 @@ const Resume = (props) => {
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Worked on Operations, database and UI design.
+            - Worked on Operations, database and UI design.
           </span>
         </div>
         <div className="experience-description">
@@ -219,33 +272,33 @@ const Resume = (props) => {
           <br />
         </div>
       </div>
-
       <div className="experience-container">
         <ResumeHeading
-          heading={"FlipTree Technologies"}
-          subHeading={"SERVER DEVELOPER"}
-          fromDate={"Feb'22"}
-          toDate={"June'22"}
+          heading={"IndoAlpine Labs"}
+          subHeading={"Operations Head"}
+          fromDate={"Jan'18"}
+          toDate={"Oct'19"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Worked as a server developer using Java and NodeJs.
+            - Worked on operations and marketing and the strategies.
           </span>
         </div>
+
         <div className="experience-description">
           <span className="resume-description-text">
-            - Effectively coded software changes and alterations based on
-            specific design specifications for FlipTree app.
+            - Managed front desk operations and customer interactions. Evaluated
+            workflow and productivity by making changes where necessary.
           </span>
           <br />
           <span className="resume-description-text">
-            - Implemented the API's required for our Lumi matrimony app, after
-            learning JavaScript and NodeJs technologies.
+            - Identified and resolved unauthorized, unsafe or ineffective
+            practices, requirements and challenges of our business.
           </span>
           <br />
           <span className="resume-description-text">
-            -Successfully identified, diagnosed, and fixed website problems,
-            including broken links, typographical errors, and formatting issues.{" "}
+            -Arranged necessary meetings with the suppliers and smoothly cracked
+            the deal.{" "}
           </span>
           <br />
         </div>
