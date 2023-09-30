@@ -1,18 +1,20 @@
 const nodemailer = require("nodemailer");
+const { GMAIL_EMAIL, GMAIL_PASSWORD, SERVER, SMTP_EMAIL, SMTP_PASS } =
+  process.env;
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  // service: process.env.NODEMAILER_SERVICE,
+  service: "smtp.elasticemail.com",
+//   port: 465,
+  secure: false,
   auth: {
-    user: process.env.NODEMAILER_USER,
-    pass: process.env.NODEMAILER_PASS,
+    user: SMTP_EMAIL,
+    pass: SMTP_PASS,
   },
 });
 
 const mailOptions = {
-  from: process.env.NODEMAILER_USER,
+  from: GMAIL_EMAIL,
+  to: GMAIL_EMAIL,
   subject: "Send Email Using Nodemailer",
   html: `<!doctype html>
     <html lang="en-US">
