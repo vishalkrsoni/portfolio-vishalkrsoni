@@ -1,8 +1,8 @@
 const nodemailer = require('nodemailer');
-const { GMAIL_EMAIL, GMAIL_PASSWORD } = process.env;
+const { NODEMAILER_SERVICE, GMAIL_EMAIL, GMAIL_PASSWORD } = process.env;
 
 let config = {
-  service: 'gmail',
+  service: NODEMAILER_SERVICE,
   auth: {
     user: GMAIL_EMAIL,
     pass: GMAIL_PASSWORD,
