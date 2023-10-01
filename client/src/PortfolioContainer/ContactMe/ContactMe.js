@@ -36,7 +36,10 @@ export default function ContactMe(props) {
   const handleMessage = (e) => {
     setMessage(e.target.value);
   };
-  console.log(name, email, message);
+
+  const axiosInstance = axios.create({
+    baseURL: "https://emailfromportfolio.onrender.com",
+  });
   const submitForm = async (e) => {
     e.preventDefault();
     try {
@@ -47,25 +50,21 @@ export default function ContactMe(props) {
       };
       setBool(true);
 
-      const res = await axios.post(
-        `https://emailfromportfolio.onrender.com/contact`,
-        data
-      );
+      const res = await axiosInstance.post(`/contact`, data);
 
-      if (name.length === 0 || email.length === 0 || message.length === 0) {
-        setBanner(res.data.message);
-        toast.error(res.data.message);
-        setBool(false);
-        setName("");
-        setEmail("");
-        setMessage("");
-        setTimeout(() => {
-          window.location.reload(false);
-          window.scrollTo(0, 0);
-        }, 3000);
-      } else if (res.status === 200) {
+      // const res = await axios.post(
+      //   `https://emailfromportfolio.onrender.com/contact`,
+      //   data
+      // );
+      // const res = await axios.post(`http://localhost:8080/contact`, data);
+
+      console.log("Response data:", res.data);
+
+      if (res.status === 200) {
         setBanner(res.data.message);
         toast.success(res.data.message);
+        console.log(res, "******* success ********");
+
         setBool(false);
         setName("");
         setEmail("");
@@ -74,20 +73,32 @@ export default function ContactMe(props) {
           window.location.reload(false);
           window.scrollTo(0, 0);
         }, 3000);
-      } else if (res.status === 400) {
+      } else {
+        console.error(res.data, "******* error ********");
         setBanner(res.data.message);
         toast.error(res.data.message);
         setBool(false);
-        setName("");
-        setEmail("");
-        setMessage("");
-        setTimeout(() => {
-          window.location.reload(false);
-          window.scrollTo(0, 0);
-        }, 3000);
       }
     } catch (error) {
-      console.log(error);
+      if (error.response) {
+        setBanner(error.response.data.message);
+        toast.error(error.response.data.message);
+        setBool(false);
+        console.error(
+          "Server returned an error response:",
+          error.response.data.message
+        );
+      } else if (error.request) {
+        setBanner(error.request.data.message);
+        toast.error(error.request.data.message);
+        setBool(false);
+        console.error("No response received:", error.request.message);
+      } else {
+        setBanner(error.message);
+        toast.error(error.message);
+        setBool(false);
+        console.error("Request error:", error.message);
+      }
     }
   };
 
