@@ -5,7 +5,11 @@
   "main": "Contact.js",
   "scripts": {
     "start": "node app",
-    "dev": "nodemon app"
+    "dev": "nodemon app",
+    "swagger": "node generateSwagger.js",
+    "lint": "eslint '**/*.js' --fix",
+    "format": "prettier --write --ignore-unknown '**/*'",
+    "prettier": "npx prettier --check --loglevel debug --ignore-unknown **/*"
   },
   "author": "",
   "license": "ISC",
