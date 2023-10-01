@@ -38,6 +38,8 @@ const sendContactInfo = async (req, res) => {
     );
 
     if (mailResponse) {
+      logger.info(`email received from ${email}`);
+
       return res.status(OK).json({
         message: 'Email send successfully',
         status: 'success',
@@ -45,6 +47,8 @@ const sendContactInfo = async (req, res) => {
         data: null,
       });
     } else {
+      logger.error(`error occurred while sending email`);
+
       return res.status(BAD_REQUEST).json({
         message: 'Error sending email',
         status: 'success',
