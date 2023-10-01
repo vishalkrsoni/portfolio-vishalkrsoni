@@ -16,6 +16,7 @@
   "dependencies": {
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
+   
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "express-validator": "^7.0.1",
@@ -26,8 +27,7 @@
   },
   "devDependencies": {
     "eslint": "^8.50.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
+   
     "express-swagger-generator": "^1.1.17",
     "prettier": "^3.0.3",
     "swagger": "^0.7.5",
