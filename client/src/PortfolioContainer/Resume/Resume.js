@@ -167,52 +167,76 @@ const Resume = (props) => {
           fromDate={"Apr'23"}
           toDate={"Oct'23"}
         />
-        <div className="experience-description">
-          <span className="resume-description-text">
-            - Leveraged Vite.js to create a high-performance web application.
-            Utilized Redux Toolkit and Thunk middleware for efficient state
-            management and asynchronous API calls.
-          </span>
-        </div>
 
         <div className="experience-description">
           <span className="resume-description-text">
-            - Implemented Storybook for React app documentation.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Automated API documentation using Swagger and API-curio.
-          </span>
-          <br />
-
-          <span className="resume-description-text">
-            - Set up Bitbucket pipelines for code commits.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Implemented robust authentication and authorization mechanisms to
-            ensure data security and user access control.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Enforced coding best practices by configuring Eslint and Prettier,
-            ensuring codebase consistency and adherence to coding guidelines.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            - Established the foundational infrastructure for a
-            microservices-based backend system, enhancing scalability and
-            modularity.{" "}
+            <b>Web Application Development : </b> Leveraged Vite.js to design
+            and develop a high-performance web application, ensuring seamless
+            user experiences.
           </span>
           <br />
 
           <span className="resume-description-text">
-            - Configured the Winston logger to provide comprehensive log
-            management, aiding in debugging and error tracking.{" "}
+            <b>State Management : </b> Utilized Redux Toolkit and Thunk
+            middleware to efficiently manage application state and handle
+            asynchronous API calls, enhancing application responsiveness.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            <b> React Documentation : </b> Implemented Storybook to create
+            comprehensive documentation for the React application, improving
+            codebase understanding and developer collaboration.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>API Integration: </b> Successfully integrated Axios into both the
+            React frontend and Node.js backend to facilitate seamless
+            communication with external APIs, enhancing data retrieval and
+            processing capabilities.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>API Documentation : </b> Automated API documentation using
+            Swagger and API-curio, making it easier for the team to understand
+            and utilize APIs effectively.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            <b>Continuous Integration : </b> Set up Bitbucket pipelines for
+            streamlined code commits and automated testing, ensuring code
+            quality and reliability.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            <b> Security and Access Control : </b> Designed and implemented
+            robust authentication and authorization mechanisms to safeguard data
+            and control user access effectively.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            <b> Code Quality Assurance : </b> Enforced coding best practices by
+            configuring Eslint and Prettier, fostering codebase consistency and
+            adherence to coding guidelines.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            <b>Logging and Error Tracking: </b> Configured the Winston logger to
+            provide comprehensive log management, aiding in debugging and error
+            tracking for improved application stability.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            <b>Microservices Architecture : </b> Established the foundational
+            infrastructure for a microservices-based backend system, enhancing
+            scalability and modularity for future growth. .{" "}
           </span>
           <br />
         </div>
       </div>
+
+
 
       <div className="experience-container">
         <ResumeHeading
