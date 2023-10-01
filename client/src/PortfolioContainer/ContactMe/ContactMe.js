@@ -56,9 +56,27 @@ export default function ContactMe(props) {
         setBanner(res.data.message);
         toast.error(res.data.message);
         setBool(false);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setTimeout(() => {
+          window.location.reload(false);
+          window.scrollTo(0, 0);
+        }, 3000);
       } else if (res.status === 200) {
         setBanner(res.data.message);
         toast.success(res.data.message);
+        setBool(false);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setTimeout(() => {
+          window.location.reload(false);
+          window.scrollTo(0, 0);
+        }, 3000);
+      } else if (res.status === 400) {
+        setBanner(res.data.message);
+        toast.error(res.data.message);
         setBool(false);
         setName("");
         setEmail("");
