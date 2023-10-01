@@ -236,34 +236,66 @@ const Resume = (props) => {
         </div>
       </div>
 
-
+      <div className="experience-container">
+        <ResumeHeading
+          heading={"MentorYard"}
+          subHeading={"Software Developer"}
+          fromDate={"July'22"}
+          toDate={"Mar'23"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            <b> Mentee-Mentorship Platform: : </b> Created a mentee-mentorship
+            platform that empowers school students to connect with industry
+            professionals, fostering their career development. This project was
+            developed using Node.js and JavaScript.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            <b> Ed-Tech Platform :</b> Developed an Ed-Tech platform designed to
+            connect and streamline operations for multiple small-scale schools
+            while efficiently managing their student data. This project was
+            built using Node.js, optimizing educational processes.
+          </span>
+          <br />
+          <span className="resume-description-text">
+            <b> Coding BootCamp :</b> During this period, I also enrolled in a
+            coding bootcamp at AttainU to enhance my understanding of React
+            concepts and deepen my technological expertise.{" "}
+          </span>
+          <br />
+        </div>
+      </div>
 
       <div className="experience-container">
         <ResumeHeading
           heading={"FlipTree Technologies"}
-          subHeading={"SERVER DEVELOPER"}
+          subHeading={"Server Developer"}
           fromDate={"Feb'22"}
           toDate={"June'22"}
         />
-        <div className="experience-description">
+        {/* <div className="experience-description">
           <span className="resume-description-text">
-            - Worked as a server developer using Java and NodeJs.
+          woked as server developer
           </span>
-        </div>
+        </div> */}
         <div className="experience-description">
           <span className="resume-description-text">
-            - Effectively coded software changes and alterations based on
-            specific design specifications for FlipTree app.
+            <b>Software Development : </b> Proficiently coded software changes
+            and modifications in compliance with specific design specifications
+            using Node.js.
           </span>
           <br />
           <span className="resume-description-text">
-            - Implemented the API's required for our Lumi matrimony app, after
-            learning JavaScript and NodeJs technologies.
+            <b> App Module Management :</b> Successfully implemented and updated
+            app modules using both Node.js and Java to enhance application
+            functionality.
           </span>
           <br />
           <span className="resume-description-text">
-            -Successfully identified, diagnosed, and fixed website problems,
-            including broken links, typographical errors, and formatting issues.{" "}
+            <b> Issue Resolution : </b> Identified, diagnosed, and resolved
+            website problems, including broken links, typographical errors, and
+            formatting issues, ensuring an optimal user experience.{" "}
           </span>
           <br />
         </div>
@@ -276,53 +308,65 @@ const Resume = (props) => {
           fromDate={"Oct'19"}
           toDate={"Nov'20"}
         />
+
         <div className="experience-description">
           <span className="resume-description-text">
-            - Worked on Operations, database and UI design.
-          </span>
-        </div>
-        <div className="experience-description">
-          <span className="resume-description-text">
-            - Used ReactJs , Redux for app and state management.
+            <b>UI Design : </b> Collaborated on the UI design of the Prep-seed
+            App using the MERN Stack, emphasizing a user-friendly interface.
           </span>
           <br />
           <span className="resume-description-text">
-            - Implemented and updated PrepSeed application module.
+            <b> App and State Management : </b>Utilized React and Redux for
+            efficient app development and state management, delivering a
+            seamless user experience.
           </span>
           <br />
           <span className="resume-description-text">
-            -Carried out day-by-day duties accurately and efficiently.{" "}
+            <b> Component Development : </b> Created visually appealing
+            components and essential APIs using Node.js to enhance the
+            application's visual and functional elements.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b> Team Collaboration : </b> Actively participated in team-based
+            projects, demonstrating versatility by taking on various roles to
+            achieve project goals.{" "}
           </span>
           <br />
         </div>
       </div>
+
       <div className="experience-container">
         <ResumeHeading
-          heading={"IndoAlpine Labs"}
+          heading={"IndoAlpine Lab (Own-start up)"}
           subHeading={"Operations Head"}
           fromDate={"Jan'18"}
           toDate={"Oct'19"}
         />
-        <div className="experience-description">
+        {/* <div className="experience-description">
           <span className="resume-description-text">
             - Worked on operations and marketing and the strategies.
           </span>
-        </div>
+        </div> */}
 
         <div className="experience-description">
           <span className="resume-description-text">
-            - Managed front desk operations and customer interactions. Evaluated
-            workflow and productivity by making changes where necessary.
+            <b>Operations Management : </b> Oversaw front desk operations and
+            customer interactions, optimizing workflow and productivity through
+            strategic changes.
           </span>
           <br />
           <span className="resume-description-text">
-            - Identified and resolved unauthorized, unsafe or ineffective
-            practices, requirements and challenges of our business.
+            <b>Customer Engagement : </b> Engaged customers effectively through
+            excellent verbal communication skills to ascertain their needs and
+            requirements, ensuring high levels of satisfaction.
           </span>
           <br />
           <span className="resume-description-text">
-            -Arranged necessary meetings with the suppliers and smoothly cracked
-            the deal.{" "}
+            <b> Strategic Planning : </b> Developed and executed effective
+            business plans, aligning strategic decisions with long-term
+            objectives.{" "}
           </span>
           <br />
         </div>
@@ -367,16 +411,15 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
         heading="Chess"
-        description="I love to play chess and have won notable prizes including Gold and Silver medals."
+        description="I am an avid chess player and have achieved significant recognition by winning numerous prizes and titles at various college-level chess tournaments. My dedication and strategic thinking in the game have earned me multiple Gold and Silver medals."
       />
       <ResumeHeading
         heading="Poetry"
-        description="Literature is something which always captivated me, apart from coding. So, I love to scribble my thoughts out most often."
+        description="I possess a profound passion for literature, which manifests in my frequent indulgence in creative writing. Crafting poetry is not just a hobby but a means through which I express my thoughts, emotions, and artistic sensibilities. "
       />
       <ResumeHeading
         heading="Poker"
-        description="I like to challenge my reflexes, decision making and calculations a lot while trying to read out the person sitting in front.
-        pushing the rank and having interactive gaming sessions excites me the most."
+        description="I relish the intellectual challenges presented by poker, as it requires quick reflexes, precise decision-making, and intricate calculations. Over time, I have honed my poker skills, clinching multiple titles and accolades in the realm of online poker while cherishing interactive gaming sessions that stimulate my strategic thinking."
       />
     </div>,
   ];
