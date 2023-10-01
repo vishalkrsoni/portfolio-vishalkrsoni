@@ -47,7 +47,10 @@ export default function ContactMe(props) {
       };
       setBool(true);
 
-      const res = await axios.post(`http://localhost:8080/contact`, data);
+      const res = await axios.post(
+        `https://emailfromportfolio.onrender.com/contact`,
+        data
+      );
 
       if (name.length === 0 || email.length === 0 || message.length === 0) {
         setBanner(res.data.message);
