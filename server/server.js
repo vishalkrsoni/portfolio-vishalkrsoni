@@ -62,7 +62,7 @@ const sendContactInfo = async (req, res) => {
     await sendEmail(transporter, name, email, message);
     res.status(200).send({
       success: true,
-      message: "Email sent successfully",
+      message: "Email sent ",
       status: "success",
     });
   } catch (error) {
