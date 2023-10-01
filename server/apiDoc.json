@@ -7,15 +7,40 @@
   },
   "host": "",
   "basePath": "/",
-  "schemes": ["http", "https"],
-  "produces": ["application/json"],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
     "/contact": {
       "post": {
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "message": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       }
@@ -29,11 +54,18 @@
     },
     "basePath": "/",
     "host": "",
-    "produces": ["application/json"],
-    "schemes": ["http", "https"]
+    "produces": [
+      "application/json"
+    ],
+    "schemes": [
+      "http",
+      "https"
+    ]
   },
   "basedir": "/Users/eagle/workspace/finished/portfolio-vishalkrsoni/server/config",
-  "files": ["../router/*.js"],
+  "files": [
+    "../router/*.js"
+  ],
   "exposeModels": true,
   "exposeResponses": true
 }
