@@ -14,7 +14,7 @@ const { PORT } = process.env;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors({ origin: 'https://portfolio-vishalkrsoni.web.app/' }));
+app.use(cors({ origin: 'https://portfolio-vishalkrsoni.web.app' }));
 
 app.use(express.json());
 
