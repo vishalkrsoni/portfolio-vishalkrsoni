@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors({ origin: 'https://portfolio-vishalkrsoni.web.app/' }));
 
-app.use(cors());
 app.use(express.json());
 
 app.use('/', router);
