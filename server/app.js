@@ -8,6 +8,7 @@ dotenv.config();
 
 const app = express();
 const router = require('./router/contactMeRouter');
+const logger = require('./logger');
 
 const { PORT } = process.env;
 
@@ -21,5 +22,5 @@ app.use(express.json());
 app.use('/', router);
 
 app.listen(PORT, () => {
-  console.log(`server started at http://localhost:${PORT}/`);
+  logger.info(`server started at http://localhost:${PORT}/`);
 });

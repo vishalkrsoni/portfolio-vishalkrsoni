@@ -31,16 +31,16 @@ const sendContactInfo = async (req, res) => {
       });
     }
 
-    logger.info('Contact me API called');
+    logger.debug('Contact me API called');
 
     const mailResponse = await transporter.sendMail(
       mailOptions(GMAIL_EMAIL, GMAIL_EMAIL_RECIPIENT, name, email, message)
     );
 
-    console.log(mailResponse)
+    logger.info(`mail response : `, mailResponse.response);
 
     if (mailResponse) {
-      logger.info(`email received from ${email}`);
+      logger.debug(`email received from ${email}`);
 
       return res.status(OK).json({
         message: 'Email send successfully',
