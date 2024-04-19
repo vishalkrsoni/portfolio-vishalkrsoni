@@ -162,7 +162,87 @@ const Resume = (props) => {
       key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Lancesoft (Client-Lentra AI)"}
+          heading={"91Social (Rezolve AI)"}
+          subHeading={"Senior Software Developer"}
+          fromDate={"Dec'23"}
+          toDate={"Mar'24"}
+        />
+
+        <div className="experience-description">
+          <span className="resume-description-text">
+            <b>Spearheaded Complex Feature Implementation : </b> Led the
+            implementation of complex features, ensuring robustness and
+            scalability.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Back-end Performance Optimization : </b> Optimized back-end
+            performance through database tuning, caching strategies, and
+            asynchronous processing.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Smart Ticketing System Development : </b> Led the development of
+            a smart online ticketing system using Typescript within a monorepo
+            architecture.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Integration of AI Functionalities : </b> Collaborated with
+            cross-functional teams to integrate AI functionalities for advanced
+            ticket management.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Feature Launch Support : </b> Ensured the successful launch of
+            new features, contributing to performance enhancements.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Application State Management : </b> Enhanced application
+            responsiveness by professionally managing application state using
+            Redux Toolkit and Thunk middleware.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Automated API Documentation : </b> Automated API documentation
+            using Swagger and API-curio for improved understanding and
+            utilization of APIs.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Authentication Mechanism Design : </b> Designed and implemented
+            robust authentication mechanisms to safeguard data and control user
+            access effectively.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Microservices Architecture Establishment : </b> Established a
+            microservices-based back-end system, enhancing scalability and
+            modularity for future growth.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Coding Best Practices Enforcement : </b> Enforced coding best
+            practices by configuring Eslint and Prettier, ensuring codebase
+            consistency and adherence to coding guidelines.
+          </span>
+          <br />
+        </div>
+      </div>
+
+      <div className="experience-container">
+        <ResumeHeading
+          heading={"Lancesoft (Lentra AI)"}
           subHeading={"Mern Stack developer"}
           fromDate={"Apr'23"}
           toDate={"Oct'23"}
@@ -306,7 +386,7 @@ const Resume = (props) => {
           heading={"PrepLeaf"}
           subHeading={"Software Intern"}
           fromDate={"Oct'19"}
-          toDate={"Nov'20"}
+          toDate={"Sep'21"}
         />
 
         <div className="experience-description">

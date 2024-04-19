@@ -23,7 +23,7 @@ const WorkExperience = () => {
         heading="PrepLeaf"
         subHeading="System Engineer"
         fromDate="Oct'19"
-        toDate="Nov'20"
+        toDate="Sep'21"
         descriptions={[
           "Worked on Operations, database, and UI design.",
           "- Used ReactJs, Redux for app and state management.",

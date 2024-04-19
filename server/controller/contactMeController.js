@@ -37,6 +37,8 @@ const sendContactInfo = async (req, res) => {
       mailOptions(GMAIL_EMAIL, GMAIL_EMAIL_RECIPIENT, name, email, message)
     );
 
+    console.log(mailResponse)
+
     if (mailResponse) {
       logger.info(`email received from ${email}`);
 
