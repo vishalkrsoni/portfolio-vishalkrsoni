@@ -6,7 +6,7 @@ const {
 
 const { sendContactInfo } = require('../controller/contactMeController');
 
-contactRouter.get('/', (req, res) => {
+contactRouter.get('/check', (req, res) => {
   res.status(OK).send({
     message: 'Health check success',
     statusCode: OK,

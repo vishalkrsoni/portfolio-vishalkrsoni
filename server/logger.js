@@ -9,11 +9,12 @@ const options = {
     json: true,
     maxSize: 5242880, // 5MB
     maxFiles: 5,
-    colorize: false,
+    colorize: true,
   },
   console: {
     level: 'debug', // Print all levels to console
     handleExceptions: true,
+    colorize: true,
     json: true, // Print formatted messages to console
   },
 };
