@@ -101,7 +101,7 @@ export default function Testimonial(props) {
                       Founder <small> IndoAlpine</small>
                     </p>
                     <div className="testimonial-icon">
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i
                           className="fa fa-linkedin-square"
                           style={{
@@ -109,14 +109,14 @@ export default function Testimonial(props) {
                             background: "white",
                           }}></i>
                       </a>
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i
                           className="fa fa-instagram"
                           style={{
                             color: "#f55317fc",
                           }}></i>
                       </a>
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i className="fa fa-facebook-square"></i>
                       </a>
                     </div>
@@ -162,21 +162,21 @@ export default function Testimonial(props) {
                       CTO <small>FlipTree</small>{" "}
                     </p>
                     <div className="testimonial-icon">
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i
                           className="fa fa-linkedin-square"
                           style={{
                             color: "rgba(10,102,194)",
                           }}></i>
                       </a>
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i
                           className="fa fa-instagram"
                           style={{
                             color: "#f55317fc",
                           }}></i>
                       </a>
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i className="fa fa-facebook-square"></i>
                       </a>
                     </div>
@@ -221,21 +221,21 @@ export default function Testimonial(props) {
                       CEO <small>PrepLeaf</small>
                     </p>
                     <div className="testimonial-icon">
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i
                           className="fa fa-linkedin-square"
                           style={{
                             color: "rgba(10,102,194)",
                           }}></i>
                       </a>
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i
                           className="fa fa-instagram"
                           style={{
                             color: "#f55317fc",
                           }}></i>
                       </a>
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i className="fa fa-facebook-square"></i>
                       </a>
                     </div>
@@ -286,21 +286,21 @@ export default function Testimonial(props) {
                       CTO <small>PrepLeaf</small>
                     </p>
                     <div className="testimonial-icon">
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i
                           className="fa fa-linkedin-square"
                           style={{
                             color: "rgba(10,102,194)",
                           }}></i>
                       </a>
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i
                           className="fa fa-instagram"
                           style={{
                             color: "#f55317fc",
                           }}></i>
                       </a>
-                      <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+                      <a href="https://www.linkedin.com/in/vishalkrsoni/">
                         <i className="fa fa-facebook-square"></i>
                       </a>
                     </div>

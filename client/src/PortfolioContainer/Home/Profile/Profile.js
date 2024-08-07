@@ -21,7 +21,7 @@ const Profile = () => {
               <a href="https://github.com/vishalkrsoni">
                 <i className="fa fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/vishal-soni-a8ab14a9/">
+              <a href="https://www.linkedin.com/in/vishalkrsoni/">
                 <i className="fa fa-linkedin-square"></i>
               </a>
             </div>

@@ -62,15 +62,19 @@ const Resume = (props) => {
 
   const programmingSkillsDetails = [
     { skill: "JavaScript", ratingPercentage: 97 },
-    { skill: "React JS", ratingPercentage: 91 },
-    { skill: "Express JS", ratingPercentage: 89 },
-    { skill: "Node JS", ratingPercentage: 89 },
-    { skill: "Mongo Db", ratingPercentage: 90 },
-    { skill: "Core Java", ratingPercentage: 85 },
-    { skill: "SpringBoot", ratingPercentage: 80 },
+    { skill: "Typescript", ratingPercentage: 89 },
+    { skill: "Java", ratingPercentage: 85 },
+    { skill: "Python", ratingPercentage: 80 },
     { skill: "HTML", ratingPercentage: 95 },
     { skill: "CSS", ratingPercentage: 90 },
+    { skill: "Mongo DB", ratingPercentage: 86 },
     { skill: "SQL", ratingPercentage: 95 },
+    { skill: "Node JS", ratingPercentage: 95 },
+    { skill: "React JS", ratingPercentage: 90 },
+    { skill: "FastAPI", ratingPercentage: 80 },
+    { skill: "KAFKA", ratingPercentage: 75 },
+    { skill: "Redis", ratingPercentage: 88 },
+    { skill: "AWS", ratingPercentage: 82 },
   ];
 
   const projectsDetails = [
@@ -80,7 +84,7 @@ const Resume = (props) => {
       duration: { fromDate: "June'22", toDate: "July'22" },
       description:
         "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: ReactJs, Bootsrap, NodeJs, ExpressJs ",
+      subHeading: "Technologies Used: ReactJs, Bootstrap, NodeJs, ExpressJs ",
     },
     {
       title: "Talkies",
@@ -162,8 +166,61 @@ const Resume = (props) => {
       key="work-experience">
       <div className="experience-container">
         <ResumeHeading
+          heading={"ACL Digital, Bangalore"}
+          subHeading={"Sr. Software Engineer"}
+          fromDate={"May'23"}
+          toDate={"Present"}
+        />
+
+        <div className="experience-description">
+          <span className="resume-description-text">
+            <b>Project Base Setup: </b> Led the foundational setup of the Query
+            Engine project in Python using FastAPI, establishing the core
+            structure and ensuring best practices.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Database Design and Connectivity: </b> Engineered the PostgreSQL
+            database schema, including table design, relationship establishment,
+            and seamless integration using SQLAlchemy.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Alembic Migration Scripts: </b> Developed and managed schema
+            migration scripts with Alembic to handle initial table creation and
+            subsequent updates efficiently.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Custom Logging Mechanism: </b> Created a custom logger with
+            color-coded alerts to enhance debugging and monitoring, ensuring
+            clear visibility of application events.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Standardized API Responses: </b> Implemented an APIResponse class
+            to standardize response formats, promoting consistency and superior
+            coding standards across the application.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>CRUD Operations: </b> Designed and implemented robust CRUD
+            operations to manage database entities efficiently, ensuring data
+            integrity and performance.
+          </span>
+          <br />
+        </div>
+      </div>
+
+      <div className="experience-container">
+        <ResumeHeading
           heading={"91Social (Rezolve AI)"}
-          subHeading={"Senior Software Developer"}
+          subHeading={"Senior Software Engineer"}
           fromDate={"Dec'23"}
           toDate={"Mar'24"}
         />

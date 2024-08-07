@@ -7,9 +7,6 @@ import "./skills.css";
 function Skills() {
   return (
     <div className="skills" style={{ backgroundColor: "white" }}>
-      {/* <div className="skillsHeader">
-        <h5>Skills</h5>
-      </div> */}
       <div className="skillsContainer">
         <div className="skill--scroll">
           <Marquee
