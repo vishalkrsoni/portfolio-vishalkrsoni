@@ -9,7 +9,7 @@
 
 .about-me-parent {
   max-width: 1000px;
-  width: 70%;
+  width: 80%;
 }
 .about-me-card {
   display: flex;
@@ -17,14 +17,14 @@
   box-shadow: 0 0px 20px -2px #1f2235;
 }
 .about-me-profile {
-  width: 50%;
+  width: 58%;
   background-image: url("../../assets/AboutMe/aboutMe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .about-me-details {
-  width: 48%;
+  width: 100%;
   text-align: justify;
   padding: 30px;
 }

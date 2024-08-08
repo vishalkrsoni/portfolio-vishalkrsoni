@@ -13,25 +13,23 @@ const AboutMe = (props) => {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-  const SCREEN_CONSTSANTS = {
-    description:
-      "A Full-stack web developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a B.Tech in CSE, willing to be an asset for an organization.",
-    highlights: {
-      bullets: [
-        "Full Stack web development",
-        "Interactive Front End as per the design",
-        "MERN Stack development",
-        "Redux for State Management",
-        "Building REST API using NodeJs",
-        "Managing databases ( SQL and No-SQL)",
-        "Building REST API using SpringBoot",
-      ],
-      heading: "Here are a Few Highlights:",
-    },
-  };
+    const SCREEN_CONSTANTS = {
+      description:
+        "An accomplished Full-Stack Developer with 4 years of experience in the backend development, MERN stack and Redux development. Proven ability to build efficient, scalable applications. Strong academic foundation with a B.Tech in Computer Science. Dedicated to leveraging skills and expertise to become a valuable asset to any organization.",
+      highlights: {
+        bullets: [
+          "Proficient in MERN Stack Development",
+          "Experienced with Redux for State Management",
+          "Skilled in Building REST APIs using Node.js and SpringBoot",
+          "Designed and implemented scalable microservices architecture",
+        ],
+        heading: "Here are a Few Highlights:",
+      },
+    };
+    
 
   const renderHighlight = () => {
-    return SCREEN_CONSTSANTS.highlights.bullets.map((value, i) => (
+    return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
       <div className="highlight" key={i}>
         <div className="highlight-blob"></div>
         <span>{value}</span>
@@ -49,11 +47,11 @@ const AboutMe = (props) => {
           <div className="about-me-profile"></div>
           <div className="about-me-details">
             <span className="about-me-description">
-              {SCREEN_CONSTSANTS.description}
+              {SCREEN_CONSTANTS.description}
             </span>
             <div className="about-me-highlights">
               <div className="highlight-heading">
-                <span>{SCREEN_CONSTSANTS.highlights.heading}</span>
+                <span>{SCREEN_CONSTANTS.highlights.heading}</span>
               </div>
               {renderHighlight()}
             </div>

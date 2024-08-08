@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   min-height: fit-content;
-  margin: 120px 0;
+  margin: 90px 0;
 }
 
 .skill__scroll__container {
@@ -13,14 +13,14 @@
 
 .resume-card {
   display: flex;
-  height: 360px;
-  width: 1100px;
+  height: 320px;
+  width: 1200px;
 }
 
 .resume-bullets {
   box-shadow: 15px 0 9px -15px #1f2235;
   height: 100%;
-  width: 320px;
+  width: 300px;
 }
 
 .resume-bullet-details {

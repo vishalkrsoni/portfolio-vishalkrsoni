@@ -10,6 +10,7 @@ import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./ContactMe.css";
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
@@ -114,6 +115,7 @@ export default function ContactMe(props) {
                 "Get In Touch 🤝",
                 "+91-7838516299 ",
                 "Email Me And 📧",
+                "vishalkrsoni1@gmail.com",
                 "Get Your Job Done! 👍🏻",
               ]}
               typeSpeed={70}
@@ -140,7 +142,7 @@ export default function ContactMe(props) {
         </div>
         <div className="back-form">
           <div className="img-back">
-            <h4>Send Your Email Here!</h4>
+            <h4>Email Me Here </h4>
             <img src={imgBack} alt="image not found" />
           </div>
 

@@ -627,7 +627,7 @@ const Resume = (props) => {
       </div>
 
       <div className="skill__scroll__container">
-        <ScreenHeading title={"Skills"} className="skill__scroll__heading" />
+        {/* <ScreenHeading title={"Skills"} className="skill__scroll__heading" /> */}
         <div className="skills_scroll">
           <Skills />
         </div>

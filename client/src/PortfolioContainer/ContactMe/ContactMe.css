@@ -9,7 +9,7 @@
 }
 
 .central-form {
-  max-width: 1100px;
+  max-width: 1000px;
   padding: 10px;
   display: flex;
   box-shadow: 0 0px 20px -2px #1f2235;
@@ -28,8 +28,8 @@
 }
 
 .back-form {
-  max-width: 380px;
-  margin: 0 auto;
+  max-width: 300px;
+  margin: 10px 40px;
 }
 
 .back-form .img-back {
@@ -47,7 +47,7 @@
 
 .back-form .img-back img {
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .central-form form {
