@@ -168,50 +168,62 @@ const Resume = (props) => {
         <ResumeHeading
           heading={"ACL Digital, Bangalore"}
           subHeading={"Sr. Software Engineer"}
-          fromDate={"May'23"}
-          toDate={"Present"}
+          fromDate={"May'24"}
+          toDate={"May'26"}
         />
 
         <div className="experience-description">
           <span className="resume-description-text">
-            <b>Project Base Setup: </b> Led the foundational setup of the Query
-            Engine project in Python using FastAPI, establishing the core
-            structure and ensuring best practices.
+            <b>Microservices Architecture: </b> Designed and implemented a
+            microservices-based architecture using Node.js (TypeScript), Redis
+            (caching &amp; queuing), and PostgreSQL, improving system performance
+            by up to 70%.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Database Design and Connectivity: </b> Engineered the PostgreSQL
-            database schema, including table design, relationship establishment,
-            and seamless integration using SQLAlchemy.
+            <b>Real-Time Systems: </b> Built low-latency real-time systems using
+            WebSockets for event-driven communication and developed three
+            microservices (REST APIs and WebSocket service) to enable scalable,
+            real-time applications.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Alembic Migration Scripts: </b> Developed and managed schema
-            migration scripts with Alembic to handle initial table creation and
-            subsequent updates efficiently.
+            <b>RAG Application: </b> Developed a Llama3-based RAG
+            (Retrieval-Augmented Generation) application using Ollama, enabling
+            intelligent querying over unstructured data sources with end-to-end
+            document ingestion pipelines supporting PDFs (OCR-enabled), Excel,
+            and Word documents.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Custom Logging Mechanism: </b> Created a custom logger with
-            color-coded alerts to enhance debugging and monitoring, ensuring
-            clear visibility of application events.
+            <b>LangChain Pipelines: </b> Designed modular pipelines with
+            LangChain (including langchain-chroma, langchain-huggingface) for
+            efficient document chunking, embedding, and retrieval.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Standardized API Responses: </b> Implemented an APIResponse class
-            to standardize response formats, promoting consistency and superior
-            coding standards across the application.
+            <b>API Performance Optimization: </b> Optimized API response times
+            and reduced database load through efficient caching strategies,
+            query tuning, and optimized schema design, ensuring high scalability
+            for growing user base and high-traffic events.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>CRUD Operations: </b> Designed and implemented robust CRUD
-            operations to manage database entities efficiently, ensuring data
-            integrity and performance.
+            <b>Query Engine Backend: </b> Established a Query Engine backend
+            using FastAPI, including PostgreSQL schema design, connection
+            management, and migration scripts.
+          </span>
+          <br />
+
+          <span className="resume-description-text">
+            <b>Clean Architecture: </b> Implemented custom logging, standardized
+            API responses, and clean architecture practices to improve
+            maintainability and team productivity.
           </span>
           <br />
         </div>
@@ -219,10 +231,10 @@ const Resume = (props) => {
 
       <div className="experience-container">
         <ResumeHeading
-          heading={"91Social (Rezolve AI)"}
-          subHeading={"Senior Software Engineer"}
+          heading={"91 Social, Bangalore (Resolve AI)"}
+          subHeading={"Sr. Software Engineer"}
           fromDate={"Dec'23"}
-          toDate={"Mar'24"}
+          toDate={"Apr'24"}
         />
 
         <div className="experience-description">
@@ -627,7 +639,7 @@ const Resume = (props) => {
       </div>
 
       <div className="skill__scroll__container">
-        {/* <ScreenHeading title={"Skills"} className="skill__scroll__heading" /> */}
+        <ScreenHeading title={"Skills"} className="skill__scroll__heading" />
         <div className="skills_scroll">
           <Skills />
         </div>

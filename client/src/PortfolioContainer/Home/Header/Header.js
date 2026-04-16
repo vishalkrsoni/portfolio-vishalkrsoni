@@ -18,6 +18,7 @@ export default function Header() {
 
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
     if (screenIndex < 0) return;
+    setSelectedScreen(screenIndex);
   };
   let currentScreenSubscription =
     ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
@@ -61,12 +62,8 @@ export default function Header() {
   };
 
   const scrollToTop = () => {
-    const c = document.documentElement.scrollTop || document.body.scrollTop;
-    if (c > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, c - c / 20);
-      setSelectedScreen(0);
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setSelectedScreen(0);
   };
 
   useEffect(() => {
