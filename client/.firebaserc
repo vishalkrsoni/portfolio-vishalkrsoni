@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "portfolio-vishalkrsoni"
-  }
+    "default": "portfolio-vishalkrsoni",
+    "portfolio-app": "portfolio-vishalkrsoni"
+  },
+  "targets": {},
+  "etags": {}
 }

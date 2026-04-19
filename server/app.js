@@ -18,8 +18,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({ origin: 'https://portfolio-vishalkrsoni.web.app' }));
 
 app.use(express.json());
-
-app.use('/', router);
+app.get('/', (req, res) => {
+  res.json({
+    status: 'ok',
+    message: 'Health is good',
+  });
+});
+app.use('/api/', router);
 
 app.listen(PORT, () => {
   logger.info(`server started at http://localhost:${PORT}/`);
