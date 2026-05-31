@@ -77,14 +77,79 @@ const Resume = (props) => {
     { skill: "AWS", ratingPercentage: 82 },
   ];
 
+  const workExperiencePeriods = [
+    { fromDate: "Sep'18", toDate: "Dec'21" },
+    { fromDate: "Feb'22", toDate: "Jun'22" },
+    { fromDate: "Apr'23", toDate: "Dec'23" },
+    { fromDate: "Dec'23", toDate: "May'24" },
+    { fromDate: "May'24", toDate: "May'26" },
+  ];
+
+  const monthMap = {
+    jan: 0,
+    january: 0,
+    feb: 1,
+    february: 1,
+    mar: 2,
+    march: 2,
+    apr: 3,
+    april: 3,
+    may: 4,
+    jun: 5,
+    june: 5,
+    jul: 6,
+    july: 6,
+    aug: 7,
+    august: 7,
+    sep: 8,
+    sept: 8,
+    september: 8,
+    oct: 9,
+    october: 9,
+    nov: 10,
+    november: 10,
+    dec: 11,
+    december: 11,
+  };
+
+  const parseResumeDate = (dateLabel) => {
+    const normalizedDate = dateLabel.toLowerCase().replace("'", "");
+    const monthName = normalizedDate.replace(/\d/g, "");
+    const year = Number(normalizedDate.replace(/\D/g, ""));
+
+    return {
+      month: monthMap[monthName],
+      year: year < 100 ? 2000 + year : year,
+    };
+  };
+
+  const getInclusiveMonths = ({ fromDate, toDate }) => {
+    const from = parseResumeDate(fromDate);
+    const to = parseResumeDate(toDate);
+
+    return (to.year - from.year) * 12 + to.month - from.month + 1;
+  };
+
+  const totalExperienceMonths = workExperiencePeriods.reduce(
+    (totalMonths, period) => totalMonths + getInclusiveMonths(period),
+    0
+  );
+  const totalExperienceYears = Math.floor(totalExperienceMonths / 12);
+  const remainingExperienceMonths = totalExperienceMonths % 12;
+  const totalExperienceLabel = `${totalExperienceYears}+ years${
+    remainingExperienceMonths
+      ? ` (${totalExperienceYears} years ${remainingExperienceMonths} months)`
+      : ""
+  }`;
+
   const projectsDetails = [
     {
       title: "Personal Portfolio Website",
       projectUrl: "https://portfolio-vishalkrsoni.web.app/",
       duration: { fromDate: "June'22", toDate: "July'22" },
       description:
-        "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: ReactJs, Bootstrap, NodeJs, ExpressJs ",
+        "A personal portfolio website that brings my profile, experience, and projects together in one place.",
+      subHeading: "Technologies Used: React.js, Bootstrap, Node.js, Express.js",
     },
     {
       title: "Talkies",
@@ -92,9 +157,9 @@ const Resume = (props) => {
 
       duration: { fromDate: "Sept'22", toDate: "Nov'22" },
       description:
-        "A movie platform which can handle a load of 10000 users. Where users can watch their favourite movies and Web-Series. I've also implemented subscription model and Stripe payment module",
+        "A movie streaming platform built to support up to 10,000 users, with subscriptions and Stripe payment integration for movies and web series.",
       subHeading:
-        "Technologies Used: FireBase, ReactJs, NodeJs, ExpressJs, Stripe",
+        "Technologies Used: Firebase, React.js, Node.js, Express.js, Stripe",
     },
     {
       title: "Easy-Buy",
@@ -102,18 +167,17 @@ const Resume = (props) => {
 
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "An ecommerce application designed to sell products online wth payment system integration place.",
-      subHeading: "Technologies Used: React JS, Redux, ExpressJs, NodeJs",
+        "An ecommerce application for selling products online, complete with payment system integration.",
+      subHeading: "Technologies Used: React.js, Redux, Express.js, Node.js",
     },
     {
       title: "The Tech Geek",
       projectUrl: "https://euphonious-halva-ae97a5.netlify.app/",
 
       duration: { fromDate: "2020", toDate: "2021" },
-      description:
-        "A blogging website to add and read technical blogs and more",
+      description: "A blogging platform for publishing and reading technical articles.",
       subHeading:
-        "Technologies Used:  ReactJs, Mongo DB, Express Js, Node Js, Redux",
+        "Technologies Used: React.js, MongoDB, Express.js, Node.js, Redux",
     },
     {
       title: "Chit Chat",
@@ -121,9 +185,9 @@ const Resume = (props) => {
 
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "A real-time chatting application which provides us calling feature as well.",
+        "A real-time chat application with integrated calling features.",
       subHeading:
-        "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux,SocketIo",
+        "Technologies Used: React Native, MongoDB, Express.js, Node.js, Redux, Socket.IO",
     },
     {
       title: "My-Moments ",
@@ -131,9 +195,9 @@ const Resume = (props) => {
 
       duration: { fromDate: "2020", toDate: "2021" },
       description:
-        "An application which allows users to share theirs momeries by sharing their memories in terms of Images and GeoLocation",
+        "A memory-sharing application that lets users post moments with images and geolocation data.",
       subHeading:
-        "Technologies Used: Mongo DB, Epress Js, React Js, Node JS, Redux, Google-Geo-Location",
+        "Technologies Used: MongoDB, Express.js, React.js, Node.js, Redux, Google Geolocation",
     },
   ];
 
@@ -167,63 +231,50 @@ const Resume = (props) => {
       <div className="experience-container">
         <ResumeHeading
           heading={"ACL Digital, Bangalore"}
-          subHeading={"Sr. Software Engineer"}
-          fromDate={"May'24"}
-          toDate={"May'26"}
+          subHeading={"Senior Software Engineer"}
+          fromDate={workExperiencePeriods[4].fromDate}
+          toDate={workExperiencePeriods[4].toDate}
         />
 
         <div className="experience-description">
           <span className="resume-description-text">
-            <b>Microservices Architecture: </b> Designed and implemented a
-            microservices-based architecture using Node.js (TypeScript), Redis
-            (caching &amp; queuing), and PostgreSQL, improving system performance
-            by up to 70%.
+            <b>Microservices Architecture: </b> Designed and implemented
+            scalable microservices with Node.js, TypeScript, Redis, and
+            PostgreSQL, improving system performance by up to 80%.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Real-Time Systems: </b> Built low-latency real-time systems using
-            WebSockets for event-driven communication and developed three
-            microservices (REST APIs and WebSocket service) to enable scalable,
-            real-time applications.
+            <b>Service Ownership: </b> Developed and managed three
+            microservices, including two API services and one WebSocket service,
+            to support scalable product workflows.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>RAG Application: </b> Developed a Llama3-based RAG
-            (Retrieval-Augmented Generation) application using Ollama, enabling
-            intelligent querying over unstructured data sources with end-to-end
-            document ingestion pipelines supporting PDFs (OCR-enabled), Excel,
-            and Word documents.
+            <b>Client Collaboration: </b> Led direct client interactions,
+            gathered requirements, refined features, and translated business
+            needs into technical solutions.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>LangChain Pipelines: </b> Designed modular pipelines with
-            LangChain (including langchain-chroma, langchain-huggingface) for
-            efficient document chunking, embedding, and retrieval.
+            <b>Real-Time Communication: </b> Enhanced real-time communication
+            with WebSockets, ensuring instant updates and a seamless user
+            experience.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>API Performance Optimization: </b> Optimized API response times
-            and reduced database load through efficient caching strategies,
-            query tuning, and optimized schema design, ensuring high scalability
-            for growing user base and high-traffic events.
+            <b>API Performance Optimization: </b> Reduced API latency and
+            database load through efficient caching strategies and optimized
+            database queries.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Query Engine Backend: </b> Established a Query Engine backend
-            using FastAPI, including PostgreSQL schema design, connection
-            management, and migration scripts.
-          </span>
-          <br />
-
-          <span className="resume-description-text">
-            <b>Clean Architecture: </b> Implemented custom logging, standardized
-            API responses, and clean architecture practices to improve
-            maintainability and team productivity.
+            <b>Scalability: </b> Designed systems capable of supporting a
+            growing user base and high-traffic events.
           </span>
           <br />
         </div>
@@ -231,79 +282,55 @@ const Resume = (props) => {
 
       <div className="experience-container">
         <ResumeHeading
-          heading={"91 Social, Bangalore (Resolve AI)"}
-          subHeading={"Sr. Software Engineer"}
-          fromDate={"Dec'23"}
-          toDate={"Apr'24"}
+          heading={"91Social"}
+          subHeading={"Senior Software Developer"}
+          fromDate={workExperiencePeriods[3].fromDate}
+          toDate={workExperiencePeriods[3].toDate}
         />
 
         <div className="experience-description">
           <span className="resume-description-text">
-            <b>Spearheaded Complex Feature Implementation : </b> Led the
-            implementation of complex features, ensuring robustness and
-            scalability.
+            <b>Complex Feature Delivery: </b> Led implementation of complex
+            product features with a focus on robustness, scalability, and
+            maintainable delivery.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Back-end Performance Optimization : </b> Optimized back-end
+            <b>Backend Performance Optimization: </b> Improved backend
             performance through database tuning, caching strategies, and
             asynchronous processing.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Smart Ticketing System Development : </b> Led the development of
-            a smart online ticketing system using Typescript within a monorepo
-            architecture.
+            <b>Smart Ticketing System: </b> Led development of a smart online
+            ticketing system using TypeScript within a monorepo architecture.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Integration of AI Functionalities : </b> Collaborated with
-            cross-functional teams to integrate AI functionalities for advanced
-            ticket management.
+            <b>AI Feature Integration: </b> Collaborated with cross-functional
+            teams to integrate AI capabilities for advanced ticket management.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Feature Launch Support : </b> Ensured the successful launch of
-            new features, contributing to performance enhancements.
+            <b>Feature Launch Support: </b> Supported successful feature
+            releases and contributed to measurable performance improvements.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Application State Management : </b> Enhanced application
-            responsiveness by professionally managing application state using
-            Redux Toolkit and Thunk middleware.
+            <b>Application State Management: </b> Improved application
+            responsiveness by managing complex state with Redux Toolkit and
+            Thunk middleware.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>Automated API Documentation : </b> Automated API documentation
-            using Swagger and API-curio for improved understanding and
-            utilization of APIs.
-          </span>
-          <br />
-
-          <span className="resume-description-text">
-            <b>Authentication Mechanism Design : </b> Designed and implemented
-            robust authentication mechanisms to safeguard data and control user
-            access effectively.
-          </span>
-          <br />
-
-          <span className="resume-description-text">
-            <b>Microservices Architecture Establishment : </b> Established a
-            microservices-based back-end system, enhancing scalability and
-            modularity for future growth.
-          </span>
-          <br />
-
-          <span className="resume-description-text">
-            <b>Coding Best Practices Enforcement : </b> Enforced coding best
-            practices by configuring Eslint and Prettier, ensuring codebase
-            consistency and adherence to coding guidelines.
+            <b>Project: </b> Worked on Lakers Bay, a smart ticketing service
+            focused on advanced ticket management and operational efficiency.
           </span>
           <br />
         </div>
@@ -311,140 +338,80 @@ const Resume = (props) => {
 
       <div className="experience-container">
         <ResumeHeading
-          heading={"Lancesoft (Lentra AI)"}
-          subHeading={"Mern Stack developer"}
-          fromDate={"Apr'23"}
-          toDate={"Oct'23"}
+          heading={"Lancesoft Bangalore"}
+          subHeading={"MERN Stack Developer"}
+          fromDate={workExperiencePeriods[2].fromDate}
+          toDate={workExperiencePeriods[2].toDate}
         />
 
         <div className="experience-description">
           <span className="resume-description-text">
-            <b>Web Application Development : </b> Leveraged Vite.js to design
-            and develop a high-performance web application, ensuring seamless
-            user experiences.
+            <b>SaaS Platform Development: </b> Architected a SaaS banking
+            service management platform powered by Vite.js and the MERN stack.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>State Management : </b> Utilized Redux Toolkit and Thunk
-            middleware to efficiently manage application state and handle
-            asynchronous API calls, enhancing application responsiveness.
+            <b>Full-Stack Engineering: </b> Developed and maintained robust,
+            scalable web applications across React, Node.js, Express.js, and
+            MongoDB.
           </span>
           <br />
           <span className="resume-description-text">
-            <b> React Documentation : </b> Implemented Storybook to create
-            comprehensive documentation for the React application, improving
-            codebase understanding and developer collaboration.
-          </span>
-          <br />
-
-          <span className="resume-description-text">
-            <b>API Integration: </b> Successfully integrated Axios into both the
-            React frontend and Node.js backend to facilitate seamless
-            communication with external APIs, enhancing data retrieval and
-            processing capabilities.
+            <b>API Development: </b> Designed and implemented RESTful APIs for
+            seamless integration between frontend and backend systems.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b>API Documentation : </b> Automated API documentation using
-            Swagger and API-curio, making it easier for the team to understand
-            and utilize APIs effectively.
+            <b>Cross-Functional Collaboration: </b> Collaborated with frontend,
+            backend, and UI/UX teams to define and deliver responsive,
+            visually polished user interfaces.
           </span>
           <br />
+
           <span className="resume-description-text">
-            <b>Continuous Integration : </b> Set up Bitbucket pipelines for
-            streamlined code commits and automated testing, ensuring code
-            quality and reliability.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            <b> Security and Access Control : </b> Designed and implemented
-            robust authentication and authorization mechanisms to safeguard data
-            and control user access effectively.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            <b> Code Quality Assurance : </b> Enforced coding best practices by
-            configuring Eslint and Prettier, fostering codebase consistency and
-            adherence to coding guidelines.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            <b>Logging and Error Tracking: </b> Configured the Winston logger to
-            provide comprehensive log management, aiding in debugging and error
-            tracking for improved application stability.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            <b>Microservices Architecture : </b> Established the foundational
-            infrastructure for a microservices-based backend system, enhancing
-            scalability and modularity for future growth. .{" "}
+            <b>Project: </b> Contributed to Cadenz Profiles, improving banking
+            service workflows and profile management.
           </span>
           <br />
         </div>
       </div>
+  
 
       <div className="experience-container">
         <ResumeHeading
-          heading={"MentorYard"}
-          subHeading={"Software Developer"}
-          fromDate={"July'22"}
-          toDate={"Mar'23"}
+          heading={"Fliptree"}
+          subHeading={"Java Developer"}
+          fromDate={workExperiencePeriods[1].fromDate}
+          toDate={workExperiencePeriods[1].toDate}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            <b> Mentee-Mentorship Platform: : </b> Created a mentee-mentorship
-            platform that empowers school students to connect with industry
-            professionals, fostering their career development. This project was
-            developed using Node.js and JavaScript.
+            <b>Service Platform Development: </b> Contributed to a service
+            aggregation and booking platform using Java Spring Boot, inspired by
+            UrbanClap's service model.
           </span>
           <br />
           <span className="resume-description-text">
-            <b> Ed-Tech Platform :</b> Developed an Ed-Tech platform designed to
-            connect and streamline operations for multiple small-scale schools
-            while efficiently managing their student data. This project was
-            built using Node.js, optimizing educational processes.
+            <b>Payment Integration: </b> Integrated Stripe for secure and
+            seamless payment processing across user transactions.
           </span>
           <br />
           <span className="resume-description-text">
-            <b> Coding BootCamp :</b> During this period, I also enrolled in a
-            coding bootcamp at AttainU to enhance my understanding of React
-            concepts and deepen my technological expertise.{" "}
-          </span>
-          <br />
-        </div>
-      </div>
-
-      <div className="experience-container">
-        <ResumeHeading
-          heading={"FlipTree Technologies"}
-          subHeading={"Server Developer"}
-          fromDate={"Feb'22"}
-          toDate={"June'22"}
-        />
-        {/* <div className="experience-description">
-          <span className="resume-description-text">
-          woked as server developer
-          </span>
-        </div> */}
-        <div className="experience-description">
-          <span className="resume-description-text">
-            <b>Software Development : </b> Proficiently coded software changes
-            and modifications in compliance with specific design specifications
-            using Node.js.
+            <b>Performance Optimization: </b> Used Redis caching for frequently
+            accessed data, significantly improving application performance.
           </span>
           <br />
           <span className="resume-description-text">
-            <b> App Module Management :</b> Successfully implemented and updated
-            app modules using both Node.js and Java to enhance application
-            functionality.
+            <b>Booking Features: </b> Implemented service booking and
+            management features to improve usability and operational flow.
           </span>
           <br />
           <span className="resume-description-text">
-            <b> Issue Resolution : </b> Identified, diagnosed, and resolved
-            website problems, including broken links, typographical errors, and
-            formatting issues, ensuring an optimal user experience.{" "}
+            <b>Lumi Matrimony: </b> Developed a matrimonial website with Node.js
+            and Redis caching, focusing on matchmaking features and smooth site
+            performance.
           </span>
           <br />
         </div>
@@ -453,73 +420,39 @@ const Resume = (props) => {
       <div className="experience-container">
         <ResumeHeading
           heading={"PrepLeaf"}
-          subHeading={"Software Intern"}
-          fromDate={"Oct'19"}
-          toDate={"Sep'21"}
+          subHeading={"Software Engineer"}
+          fromDate={workExperiencePeriods[0].fromDate}
+          toDate={workExperiencePeriods[0].toDate}
         />
 
         <div className="experience-description">
           <span className="resume-description-text">
-            <b>UI Design : </b> Collaborated on the UI design of the Prep-seed
-            App using the MERN Stack, emphasizing a user-friendly interface.
+            <b>Component Development: </b> Built visually appealing components
+            and robust Node.js APIs to enhance application functionality.
           </span>
           <br />
           <span className="resume-description-text">
-            <b> App and State Management : </b>Utilized React and Redux for
-            efficient app development and state management, delivering a
-            seamless user experience.
+            <b>UI Collaboration: </b> Worked closely with design teams to build
+            an intuitive and user-friendly interface for the Prep-seed app.
           </span>
           <br />
           <span className="resume-description-text">
-            <b> Component Development : </b> Created visually appealing
-            components and essential APIs using Node.js to enhance the
-            application's visual and functional elements.
+            <b>State Management: </b> Implemented efficient app development
+            practices and state management techniques to deliver a seamless user
+            experience.
           </span>
           <br />
 
           <span className="resume-description-text">
-            <b> Team Collaboration : </b> Actively participated in team-based
-            projects, demonstrating versatility by taking on various roles to
-            achieve project goals.{" "}
+            <b>Team Delivery: </b> Supported project success through proactive
+            problem-solving, teamwork, and consistent delivery against project
+            deadlines.
           </span>
           <br />
         </div>
       </div>
 
-      <div className="experience-container">
-        <ResumeHeading
-          heading={"IndoAlpine Lab (Own-start up)"}
-          subHeading={"Operations Head"}
-          fromDate={"Jan'18"}
-          toDate={"Oct'19"}
-        />
-        {/* <div className="experience-description">
-          <span className="resume-description-text">
-            - Worked on operations and marketing and the strategies.
-          </span>
-        </div> */}
-
-        <div className="experience-description">
-          <span className="resume-description-text">
-            <b>Operations Management : </b> Oversaw front desk operations and
-            customer interactions, optimizing workflow and productivity through
-            strategic changes.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            <b>Customer Engagement : </b> Engaged customers effectively through
-            excellent verbal communication skills to ascertain their needs and
-            requirements, ensuring high levels of satisfaction.
-          </span>
-          <br />
-          <span className="resume-description-text">
-            <b> Strategic Planning : </b> Developed and executed effective
-            business plans, aligning strategic decisions with long-term
-            objectives.{" "}
-          </span>
-          <br />
-        </div>
-      </div>
+     
     </div>,
 
     /* PROGRAMMING SKILLS */
@@ -560,15 +493,15 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
         heading="Chess"
-        description="I am an avid chess player and have achieved significant recognition by winning numerous prizes and titles at various college-level chess tournaments. My dedication and strategic thinking in the game have earned me multiple Gold and Silver medals."
+        description="I am an avid chess player with multiple college-level prizes, including gold and silver medals, earned through strategic play and consistent practice."
       />
       <ResumeHeading
         heading="Poetry"
-        description="I possess a profound passion for literature, which manifests in my frequent indulgence in creative writing. Crafting poetry is not just a hobby but a means through which I express my thoughts, emotions, and artistic sensibilities. "
+        description="I enjoy literature and creative writing, using poetry as a way to express ideas, emotions, and personal observations."
       />
       <ResumeHeading
         heading="Poker"
-        description="I relish the intellectual challenges presented by poker, as it requires quick reflexes, precise decision-making, and intricate calculations. Over time, I have honed my poker skills, clinching multiple titles and accolades in the realm of online poker while cherishing interactive gaming sessions that stimulate my strategic thinking."
+        description="I enjoy poker for its mix of probability, quick decision-making, and strategic thinking, and I have earned multiple titles in online play."
       />
     </div>,
   ];
@@ -624,7 +557,7 @@ const Resume = (props) => {
         <div className="resume-content" id={props.id || ""}>
           <ScreenHeading
             title={"Resume"}
-            subHeading={"My Formal Bio Details"}
+            subHeading={`My Formal Bio Details | ${totalExperienceLabel} experience`}
           />
           <div className="resume-card">
             <div className="resume-bullets">
