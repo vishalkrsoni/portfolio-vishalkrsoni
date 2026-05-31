@@ -13,19 +13,19 @@ const AboutMe = (props) => {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-    const SCREEN_CONSTANTS = {
-      description:
-        "An accomplished Full-Stack Developer with 4 years of experience in the backend development, MERN stack and Redux development. Proven ability to build efficient, scalable applications. Strong academic foundation with a B.Tech in Computer Science. Dedicated to leveraging skills and expertise to become a valuable asset to any organization.",
-      highlights: {
-        bullets: [
-          "Proficient in MERN Stack Development",
-          "Experienced with Redux for State Management",
-          "Skilled in Building REST APIs using Node.js and SpringBoot",
-          "Designed and implemented scalable microservices architecture",
-        ],
-        heading: "Here are a Few Highlights:",
-      },
-    };
+  const SCREEN_CONSTANTS = {
+    description:
+      "Senior Software Engineer with 7+ years of experience building scalable backend systems, MERN applications, real-time communication workflows, and microservices. I enjoy translating business problems into reliable products with clean APIs, thoughtful architecture, and measurable performance gains.",
+    highlights: {
+      bullets: [
+        "Designed Node.js and TypeScript microservices with Redis and PostgreSQL",
+        "Built real-time WebSocket services for high-traffic product workflows",
+        "Delivered MERN stack SaaS platforms with responsive, polished UI",
+        "Improved API performance through caching, query tuning, and clean architecture",
+      ],
+      heading: "Core Strengths:",
+    },
+  };
     
 
   const renderHighlight = () => {

@@ -1,4 +1,4 @@
-:root{
+:root {
   --light-blue : #04C3FF;
   --light-blue-shadow:  rgb(69 211 255 / 27%);
   --sea-green: #0ABEAD;
@@ -16,5 +16,10 @@
   --toast-error: #e44f4ffa;
   --toast-shadow:  #9c9c9ce3;
   --toast-success: #0CBFAE;
-  --loader-color: #0CBFAE
+  --loader-color: #0CBFAE;
+  --surface: #ffffff;
+  --soft-bg: #f7fafc;
+  --line: #e8edf3;
+  --muted: #687386;
+  --shadow-soft: 0 14px 36px rgba(31, 34, 53, 0.12);
 }

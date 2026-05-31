@@ -49,6 +49,7 @@
 
 * {
   outline: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -57,6 +58,8 @@ body {
   font-family: "Poppins Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--black);
+  background-color: var(--soft-bg);
 }
 
 code {
@@ -86,8 +89,10 @@ body ::-webkit-scrollbar-thumb {
   padding: 14px 0;
   width: 160px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background-color 0.2s ease;
   font-family: "Poppins SemiBold";
+  border: 0;
 }
 
 .btn:active {
@@ -96,9 +101,10 @@ body ::-webkit-scrollbar-thumb {
 
 .primary-btn {
   color: var(--white);
-  border: 2px solid linen;
+  border: 2px solid rgba(255, 255, 255, 0.78);
   font-size: 12px;
   background-color: #1f2235;
+  box-shadow: 0 10px 24px rgba(31, 34, 53, 0.18);
 }
 /* @media only screen and (max-width: 414px) {
   .primary-btn {
@@ -110,13 +116,19 @@ body ::-webkit-scrollbar-thumb {
   color: aliceblue;
   border: 2px solid #ff5823;
   background-color: #1f2235;
+  transform: translateY(-2px);
 }
 
 .highlighted-btn {
   color: var(--white);
-
   font-size: 12px;
   background-color: #ff5823;
+  box-shadow: 0 12px 24px var(--orange-shadow);
+}
+
+.highlighted-btn:hover {
+  background-color: #f04f1e;
+  transform: translateY(-2px);
 }
 @media only screen and (max-width: 568px) {
   .highlighted-btn {
@@ -129,8 +141,7 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .fade-in {
-  opacity: 90%;
+  opacity: 1;
   transform: translateY(10px);
   transition: all 0.4s ease;
- 
 }

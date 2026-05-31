@@ -6,7 +6,7 @@ import "./skills.css";
 
 function Skills() {
   return (
-    <div className="skills" style={{ backgroundColor: "white" }}>
+    <div className="skills">
       <div className="skillsContainer">
         <div className="skill--scroll">
           <Marquee
@@ -20,7 +20,7 @@ function Skills() {
             {skillsData.map((skill, id) => (
               <div className="skill--box" key={id}>
                 <img src={skillsImage(skill)} alt={skill} />
-                <h3 style={{ color: "tomato" }}>{skill}</h3>
+                <h3>{skill}</h3>
               </div>
             ))}
           </Marquee>

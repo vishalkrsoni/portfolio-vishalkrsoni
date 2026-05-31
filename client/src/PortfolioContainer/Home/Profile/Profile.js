@@ -29,37 +29,20 @@ const Profile = () => {
 
           <div className="profile-details-name">
             <span className="primary-text">
-              {" "}
-              Hello, I'm{" "}
+              Senior Software Engineer
               <span className="highlighted-text"> Vishal Kr Soni </span>
             </span>
           </div>
 
           <div className="profile-details-role">
             <span className="primary-text">
-              {" "}
               <h1>
-                {" "}
-                {/* <Typical
-                  loop={Infinity}
-                  wrapper="b"
-                  steps={[
-                    "Full Stack  Dev 💻",
-                    1500,
-                    "Front End Dev 🧮",
-                    1500,
-                    "Back End Dev 🗄️",
-                    1500,
-                    "MERN Stack Dev 🗄️",
-                    1500,
-                  ]}
-                /> */}
                 <Typed
                   strings={[
-                    "Full Stack  Dev 💻",
-                    "Front End Dev 🧮",
-                    "Back End Dev 🗄️",
-                    "MERN Stack Dev 🗄️",
+                    "Microservices Builder",
+                    "MERN Stack Engineer",
+                    "Real-Time App Developer",
+                    "Backend Performance Optimizer",
                   ]}
                   typeSpeed={30}
                   backSpeed={50}
@@ -69,9 +52,15 @@ const Profile = () => {
                 />
               </h1>{" "}
               <span className="profile-role-tagline">
-                Building applications in Front-End and Back-End
+                I build scalable full-stack products with clean backend architecture.
               </span>
             </span>
+          </div>
+
+          <div className="profile-highlights">
+            <span>7+ years experience</span>
+            <span>Microservices</span>
+            <span>Real-time systems</span>
           </div>
 
           <div className="profile-options">

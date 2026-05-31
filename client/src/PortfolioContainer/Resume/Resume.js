@@ -507,7 +507,7 @@ const Resume = (props) => {
   ];
 
   const handleCarousal = (index) => {
-    let offsetHeight = 360;
+    let offsetHeight = 380;
 
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },

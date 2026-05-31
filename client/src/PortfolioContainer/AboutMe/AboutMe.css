@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   margin: 100px 0 0 0;
+  padding: 0 20px;
 }
 
 
@@ -14,7 +15,11 @@
 .about-me-card {
   display: flex;
   width: 100%;
-  box-shadow: 0 0px 20px -2px #1f2235;
+  box-shadow: var(--shadow-soft);
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
 }
 .about-me-profile {
   width: 58%;
@@ -25,16 +30,18 @@
 }
 .about-me-details {
   width: 100%;
-  text-align: justify;
-  padding: 30px;
+  text-align: left;
+  padding: 34px;
 }
 .about-me-description {
   font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
 }
 .about-me-highlights {
-  margin: 80px 0;
+  margin: 40px 0;
 }
-.highlght-heading {
+.highlight-heading {
   font-family: "Poppins Bold";
   font-size: 16px;
   text-decoration: solid;
@@ -43,16 +50,19 @@
 }
 .highlight {
   display: flex;
-  align-items: center;
-  margin: 5px 0;
+  align-items: flex-start;
+  margin: 10px 0;
   font-size: 14px;
+  line-height: 1.6;
 }
 .highlight-blob {
-  height: 12px;
-  width: 12px;
-  margin: 0 10px 0 0;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  margin: 7px 10px 0 0;
   background-color: #ff5823;
   border-radius: 50%;
+  box-shadow: 0 0 0 5px var(--orange-shadow);
 }
 .about-me-options .highlighted-btn {
   margin: 0 0 0 30px;
